@@ -12,20 +12,36 @@
 <body>
     <div class="getinlanddiscount">
         <ul>
-            <li><a href="javascript:;">
-                <img src="" alt="">
-            </a></li>
+
         </ul>
     </div>
 </body>
+<script src="js/jquery-1.12.2.js"></script>
+<script src="js/template-web.js"></script>
 <script>
+   $(function(){
     $.ajax({
         url:"http://193.112.55.79:9090/api/getinlanddiscount",
-        typr:get,
-        dataType:json,
-        success:function(result){
-            console.log(result)
+        type:"get",
+        dataType:"json",
+        success:function(res){
+            var data=template("temp",res)
+            $(".getinlanddiscount ul").html(data);
         }
     })
+   })
 </script>
 </html>
+<script type="text/template" id="temp">
+    {{each result value }}  
+        <li><a href="getdiscountproduct.html?productid={{value.productId}}">
+            <!-- <p>{{value.productImg}}</p> -->
+            <div></div>
+            <strong>{{value.productName}}</strong>
+            <p>{{value.productPrice}}</p>
+            <span>{{value.productFrom}} | {{value.productTime}}</span>
+        </a></li>
+        
+    {{/each}}
+    
+</script>
