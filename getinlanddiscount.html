@@ -35,8 +35,8 @@
 <script type="text/template" id="temp">
     {{each result value }}  
         <li><a href="getdiscountproduct.html?productid={{value.productId}}">
-            <!-- <p>{{value.productImg}}</p> -->
-            <div></div>
+            <%- value.productImg %>
+            <!-- <div></div> -->
             <strong>{{value.productName}}</strong>
             <p>{{value.productPrice}}</p>
             <span>{{value.productFrom}} | {{value.productTime}}</span>

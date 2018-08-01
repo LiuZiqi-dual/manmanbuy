@@ -16,10 +16,9 @@
       flex-wrap: wrap;
 }
 
-.getinlanddiscount ul li a div {
+.getinlanddiscount ul li a img {
   height: 62%;
   width: 100%;
-  background: aqua;
 }
 
 .getinlanddiscount ul li a strong {
