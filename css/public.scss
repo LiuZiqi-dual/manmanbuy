@@ -4,15 +4,14 @@ body {
     height: 50px;
     background-color: #FF841D;
     padding-left: 12px;
-    padding-right: 4px;
-    // display: flex;
+    padding-right: 4px; // display: flex;
     // justify-content: space-between;
     // align-items: center;
     .logo {
       width: 186px;
       height: 100%;
       padding-top: 12px;
-      a{
+      a {
         width: 100%;
         img {
           width: 186px;
@@ -23,62 +22,90 @@ body {
       width: 36px;
       height: 100%;
       padding-top: 7px;
-
-      a{
+      a {
         width: 100%;
-        img{
+        img {
           width: 100%;
         }
       }
     }
   }
   /* 头部导航栏部份结束 */
-
   /* 固定下载连接部分开始 */
-  .market{
+  .market {
     position: fixed;
     right: 2px;
     bottom: 60px;
-    a{
-      img{
+    z-index: 1;
+    a {
+      img {
         width: 64px;
       }
     }
   }
+  .back_top_btn {
+    // display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #EDEDED;
+    transition: all 2s;
+    position: fixed;
+    z-index: 1;
+    right: -80px;
+    bottom: 15px;
+    background-color: #fff;
+    a {
+      width: 100%;
+      height: 100%;
+      line-height: 22px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      font-size: 18px;
+      color: #BCBCBC;
+      .icon_back_top {
+        font-family: "iconfont" !important;
+        line-height: 0;
+        font-size: 23px;
+        font-style: bold;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+  }
   /* 固定下载连接部分结束 */
-
   /* footer部分开始 */
-  footer{
+  footer {
     background-color: #EFEFEF;
-    overflow: hidden; 
-    .foot_func{
+    overflow: hidden;
+    .foot_func {
       margin-top: 10px;
       height: 36px;
       display: flex;
       border: 1px solid #C4C4C4;
-      a{
+      a {
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
       }
-      .login{
-        flex: 1;
-        // background-color: #94ff00;
+      .login {
+        flex: 1; // background-color: #94ff00;
       }
-      .signin{
+      .signin {
         flex: 1;
         border-left: 1px solid #C4C4C4;
-        border-right: 1px solid #C4C4C4;
-        // background-color: #ff9400;
+        border-right: 1px solid #C4C4C4; // background-color: #ff9400;
       }
-      .back_top{
-        flex: 1.5;
-        // background-color: #0094ff;
-        a{
-          .icon_back_top{
-            font-family:"iconfont" !important;
-            font-size:14px;font-style:bold;
+      .back_top {
+        flex: 1.5; // background-color: #0094ff;
+        a {
+          .icon_back_top {
+            font-family: "iconfont" !important;
+            font-size: 14px;
+            font-style: bold;
             -webkit-font-smoothing: antialiased;
             -webkit-text-stroke-width: 0.2px;
             -moz-osx-font-smoothing: grayscale;
@@ -86,13 +113,13 @@ body {
         }
       }
     }
-    .copyright{
+    .copyright {
       text-align: center;
       padding-top: 16px;
       padding-bottom: 16px;
-      p{
+      p {
         // margin: 2px;
-        a{
+        a {
           font-size: 12px;
           color: #FF0000;
         }
