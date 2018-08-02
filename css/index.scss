@@ -38,7 +38,23 @@ body{
     /* 搜索框部分结束 */
     /* 分类导航页面开始 */
     .cat_nav{
-        
+        display: flex;
+        flex-wrap: wrap;
+
+        div{
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+            a{
+                width: 100%;
+                img{
+                    width: 70px;
+                }
+                span{
+                    height: 20px;
+                }
+            }
+        }
     }
     /* 分类导航页面结束 */
     .container{
