@@ -46,8 +46,8 @@
               <!-- 分页功能开始 -->
               <div class="foot_next">
                   <button class="prev">上一页</button>
-                  <select name="" id="select">
-                     
+                  <select name="" id="select"> 
+
                   </select>
                   <button class="next">下一页</button>
               </div>
@@ -109,6 +109,6 @@
 <!-- 分页数据模板 -->
 <script type="text/template" id="template2">
     {{each data val key}}
-    <option value="">{{key+1}}/{{val}}</option>
+    <option value="{{key+1}}">{{"第"+(key+1)+"页"}}/{{'共'+(val+1)+'页'}}</option>
     {{/each}}
 </script>
