@@ -29,21 +29,19 @@ function ajax(){
 $(".foot_next .next").on('click',function(){
     //判断如果等于最后一页  就不再加载
     if(pageid==$('#select option').length-1){
-        alert('最后一页了');
+        layer.msg('已经是最后一页了哦');
         return;
     }
-    pageid+=1;
-    console.log(pageid);      
+    pageid+=1;  
     ajax();   
 })
 $(".foot_next .prev").on('click',function(){
     //判断如果等于最后一页  就不再加载
     if(pageid==0){
-        alert('这是第一页哦');
+         layer.msg('这是第一页了哦');
         return;
     }
-    pageid-=1;
-    console.log(pageid);      
+    pageid-=1;    
     ajax();   
 })
 $("#select").on('change',function(){

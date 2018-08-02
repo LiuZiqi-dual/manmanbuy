@@ -171,10 +171,32 @@ footer .foot_next {
   display: flex;
 }
 
-footer .foot_next select {
+footer .foot_next .select_box {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+footer .foot_next .select_box #select {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  color: #666;
+  padding: 8px;
+  outline: none;
+  border: 1px solid #CCC;
+}
+
+footer .foot_next .select_box #select option {
+  appearance: none;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari 和 Chrome */
+}
+
+footer .foot_next .select_box #select option::-ms-expand {
+  display: none;
 }
 
 footer .foot_next button {
@@ -191,6 +213,7 @@ footer .foot_nav {
   background: #f3f3f3;
   padding-left: 10px;
   margin: 25px 0;
+  cursor: pointer;
 }
 
 footer .foot_nav a {
