@@ -43,6 +43,20 @@
           <!-- 固定下载连接部分结束 -->
           <!-- footer部分开始 -->
           <footer>
+              <!-- 分页功能开始 -->
+              <div class="foot_next">
+                  <button class="prev">上一页</button>
+                  <select name="" id="select">
+                     
+                  </select>
+                  <button class="next">下一页</button>
+              </div>
+              <!-- 导航跳转 -->
+              <div class="foot_nav">
+                  <a href="./index.html">首页 > </a>&nbsp;
+                  <a href="./moneyctrl.html">省钱控</a>
+              </div>
+              <!-- 分页功能结束 -->
             <div class="foot_func">
               <div class="login">
                 <a href="login.html">登录</a>
@@ -74,7 +88,6 @@
 <!-- 数据模板 -->
 <script type="text/template" id="template">
     {{each data val key}}
-
     <li>
         <a href="javascript:;" class="clearfix">
             <div class="banner_img">
@@ -91,5 +104,11 @@
             </div>
         </a>
     </li>
+    {{/each}}
+</script>
+<!-- 分页数据模板 -->
+<script type="text/template" id="template2">
+    {{each data val key}}
+    <option value="">{{key+1}}/{{val}}</option>
     {{/each}}
 </script>

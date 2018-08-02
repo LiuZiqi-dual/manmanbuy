@@ -88,7 +88,7 @@ header .icon-app {
   width: 64px;
 }
 
-.icon_dibu {
+.back_top_btn .icon_dibu {
   line-height: 0;
   font-size: 20px;
 }
@@ -98,6 +98,8 @@ header .icon-app {
 footer {
   background-color: #EFEFEF;
   overflow: hidden;
+  /* 分页开始 */
+  /* 导航跳转 */
 }
 
 footer .foot_func {
@@ -160,6 +162,46 @@ footer .copyright {
 footer .copyright p a {
   font-size: 12px;
   color: #FF0000;
+}
+
+footer .foot_next {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .foot_next select {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+footer .foot_next button {
+  height: 40px;
+  width: 90px;
+}
+
+footer .foot_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  background: #f3f3f3;
+  padding-left: 10px;
+  margin: 25px 0;
+}
+
+footer .foot_nav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
 }
 
 /* footer部分结束 */
