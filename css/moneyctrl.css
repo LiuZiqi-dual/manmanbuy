@@ -88,6 +88,11 @@ header .icon-app {
   width: 64px;
 }
 
+.icon_dibu {
+  line-height: 0;
+  font-size: 20px;
+}
+
 /* 固定下载连接部分结束 */
 /* footer部分开始 */
 footer {
