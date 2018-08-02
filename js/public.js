@@ -6,8 +6,7 @@ $(window).on('scroll', function (e) {
         $('.back_top_btn').show().css({right:'-80px',transform:'rotate(-360deg)'});
         // $('.back_top_btn').hide();
     } else {
-        // $('.back_top_btn').show(500);
+        // $('.back_top_btn').show();
         $('.back_top_btn').show().css({right:'85%',transform:'rotate(360deg)'});
     }
-
 });
