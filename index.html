@@ -32,10 +32,17 @@
   <!-- 导航栏部分结束 -->
   <!-- 搜索框部分开始 -->
   <div class="search">
-    <input type="text" placeholder="搜索您心仪的商品，会有惊喜哦！">
-    <button></button>
+    <div class="search_box">
+      <input type="text" placeholder="搜索您心仪的商品，会有惊喜哦！">
+      <button>搜索</button>
+    </div>  
   </div>
   <!-- 搜索框部分结束 -->
+  <!-- 分类导航页面开始 -->
+  <div class="cat_nav">
+
+  </div>
+  <!-- 分类导航页面结束 -->
   <div class="container"></div>
   <!-- 底部固定部分开始 -->
   <div class="market">
@@ -72,6 +79,21 @@
   <!-- footer部分结束 -->
 </body>
 <script src="./js/jquery-1.12.2.js"></script>
+<script src="./art-template/template-web.js"></script>
 <script src="./lib/scrollListener.js"></script>
 <script src="./js/public.js"></script>
+<script src="./js/index.js"></script>
+<!-- 引入模板 -->
+<script type="text/template" id="cat_nav_template">
+  {{each res val key}}
+  <div>
+    <a href={{val.titlehref}}>
+      {{@val.img}}
+      <span>
+      {{val.name}}  
+      </span>
+    </a>  
+  </div>
+  {{/each}}
+</script>
 </html>

@@ -1,3 +1,50 @@
+@charset "UTF-8";
+body {
+  /* 搜索框部分开始 */
+  /* 搜索框部分结束 */
+  /* 分类导航页面开始 */
+  /* 分类导航页面结束 */
+}
+
+body .search {
+  padding: 10px;
+  height: 50px;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+body .search .search_box {
+  position: relative;
+  height: 30px;
+  background-color: #F1F1F1;
+  border-radius: 15px;
+  padding-right: 64px;
+}
+
+body .search .search_box input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 0px solid transparent;
+  padding-left: 20px;
+  font-size: 16px;
+  outline: none;
+}
+
+body .search .search_box button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 64px;
+  height: 30px;
+  line-height: 100%;
+  background-color: #FF841D;
+  border: 0px solid transparent;
+  border-radius: 15px;
+  font-size: 16px;
+  color: #fff;
+  outline: none;
+}
+
 body .container {
   height: 2000px;
   background-color: #0094ff;
