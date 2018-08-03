@@ -62,9 +62,9 @@ a {
     font-size: 14px;
 }
 
-a:hover {
-    /* color: #e33333; */
-}
+/* a:hover {
+    color: #e33333;
+} */
 
 button,
 input {
