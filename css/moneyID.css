@@ -77,12 +77,14 @@ header .icon-app {
 
 .view #disstorck {
   margin: 20px 0 0 10px;
+  height: 250px;
+  overflow: scroll;
 }
 
 .view #disstorck a {
   border-bottom: 1px solid #ccc;
   padding: 0 10px;
-  width: 60%;
+  width: 70%;
   display: block;
 }
 
@@ -92,6 +94,143 @@ header .icon-app {
 
 .view #disstorck a strong {
   color: #fd5f00;
+  float: right;
+}
+
+/* 前往下载 */
+.Gobuy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 10px 25px 10px;
+  border-bottom: 1px solid #c1a7a7;
+}
+
+.Gobuy a {
+  border-radius: 15px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ff9000;
+  color: #fff;
+}
+
+.Gobuy a span {
+  margin-left: 2px;
+}
+
+/* 广告二维码图片 */
+.Gobuy_banner img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 发表评论 */
+.ui-border-t {
+  padding: 6px 6px;
+  width: 100%;
+}
+
+.ui-border-t .tit {
+  font-size: 16px;
+  color: #505050;
+  margin: 10px 0;
+}
+
+.ui-border-t .form {
+  border: 2px solid #ECEAE8;
+  border-radius: 2px;
+  padding: 4px 0 0 4px;
+  background-color: #fff;
+  position: relative;
+  width: 98%;
+  margin: 0px auto;
+}
+
+.ui-border-t .form textarea {
+  width: 98%;
+  resize: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: none;
+  line-height: 22px;
+  font-size: 14px;
+  outline: 0;
+  color: #666;
+  height: 68px;
+}
+
+.ui-border-t .ctrl {
+  height: 36px;
+  background: #fbfbfb;
+  margin-left: -4px;
+  border-top: solid 1px #f2f2f2;
+}
+
+.ui-border-t .ctrl #ctl00_ContentBody_Button1 {
+  border: none;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ff9000;
+  height: 35px;
+  width: 85px;
+  float: right;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.ui-border-t .list .ui-border-b {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.ui-border-t .list .ui-border-b .userimg {
+  width: 35px;
+  height: 35px;
+  margin: 0 10px;
+}
+
+.ui-border-t .list .ui-border-b .userimg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.ui-border-t .list .ui-border-b .con {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  line-height: 20px;
+  margin: 0 5px;
+}
+
+.ui-border-t .list .ui-border-b .con .name .username {
+  float: left;
+  color: #a5c6dc;
+}
+
+.ui-border-t .list .ui-border-b .con .name .time {
   float: right;
 }
 /*# sourceMappingURL=moneyID.css.map */
