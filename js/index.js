@@ -10,4 +10,7 @@ $.ajax({
         }));
     }
 });
-
+$.get("http://193.112.55.79:9090/api/getmoneyctrl",'',function(res){
+    var html = template("template",{data:res.result});     
+    $('.shangping ul').html(html);    
+},'json')
