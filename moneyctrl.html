@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="./favicon.ico">
     <link rel="stylesheet" href="./css/base.css">
@@ -16,11 +16,11 @@
 <body>
     <!-- 头部标题 -->
     <header id="backTop">
-        <a href="javascript:;" class="a_icon">
+        <a href="./index.html" class="a_icon">
             <i class="iconfont">&#xe697;</i>
         </a>
         <h2>省钱控 - 最新优惠</h2>
-        <a href="javascript:;" class="icon-app"></a>
+        <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap" class="icon-app"></a>
     </header>
     <!-- 商品项目 -->
     <div class="view">
@@ -30,37 +30,42 @@
             </ul>
         </div>
     </div>
-    <!-- 固定下载连接部分开始 -->
-    <div class="market">
-        <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap">
-            <img src="./images/market.png" alt="">
-        </a>
-    </div>
-    <div class="back_top_btn">
-        <a href="#backTop">
-            一
-            <i class="iconfont icon_dibu">&#xe6a5;</i>
-        </a>
-    </div>
-    <!-- 固定下载连接部分结束 -->
-    <!-- footer部分开始 -->
-    <footer>
-        <!-- 分页功能开始 -->
-        <div class="foot_next">
-            <button class="prev">上一页</button>
-            <select name="" id="select">
+          <!-- 固定下载连接部分开始 -->
+          <div class="market">
+            <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap">
+              <img src="./images/market.png" alt="">
+            </a>
+          </div>
+          <div class="back_top_btn">
+            <a href="#backTop">
+              一<i class="iconfont icon_dibu">&#xe6a5;</i>
+            </a>
+          </div>
+          <!-- 固定下载连接部分结束 -->
+          <!-- footer部分开始 -->
+          <footer>
+              <!-- 分页功能开始 -->
+              <div class="foot_next">
+                <a href="#backTop">
+                  <button class="prev">上一页</button>
+                </a>
+                  <div class="select_box">
+                  <select name="" id="select"> 
 
-            </select>
-            <button class="next">下一页</button>
-        </div>
-        <!-- 导航跳转 -->
-        <div class="foot_nav">
-            <a href="./index.html">首页 > </a>&nbsp;
-            <a href="./moneyctrl.html">省钱控</a>
-        </div>
-        <!-- 分页功能结束 -->
-        <div class="foot_func">
-            <div class="login">
+                  </select>
+                  </div>
+                <a href="#backTop">
+                  <button class="next">下一页</button>
+                </a>
+              </div>
+              <!-- 导航跳转 -->
+              <div class="foot_nav">
+                  <a href="./index.html">首页 > </a>&nbsp;
+                  <a href="./moneyctrl.html">省钱控</a>
+              </div>
+              <!-- 分页功能结束 -->
+            <div class="foot_func">
+              <div class="login">
                 <a href="login.html">登录</a>
             </div>
             <div class="signin">
@@ -85,6 +90,8 @@
 </html>
 <script src="js/jquery-1.12.2.min.js"></script>
 <!-- 模板文件 -->
+<script src="lib/tap-swpie.js"></script>
+<script src="lib/提示信息插件/layer.js"></script>
 <script src="./art-template/template-web.js"></script>
 <script src="./js/public.js"></script>
 <script src="js/moneyctrl.js"></script>
@@ -92,7 +99,7 @@
 <script type="text/template" id="template">
     {{each data val key}}
     <li>
-        <a href="javascript:;" class="clearfix">
+        <a href="./getmoneyID.html?moneyID={{val.productId}}" class="clearfix">
             <div class="banner_img">
                 <!-- {{val.productImgSm}} -->
                 {{@val.productImgSm}}
@@ -113,6 +120,6 @@
 <!-- 分页数据模板 -->
 <script type="text/template" id="template2">
     {{each data val key}}
-    <option value="">{{key+1}}/{{val}}</option>
+    <option value="{{key+1}}">{{"第"+(key+1)+"页"}}/{{'共'+(val+1)+'页'}}</option>
     {{/each}}
 </script>

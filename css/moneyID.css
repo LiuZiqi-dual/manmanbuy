@@ -1,0 +1,40 @@
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #ff841d;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .a_icon {
+  width: 50px;
+  text-align: center;
+}
+
+header .a_icon i {
+  font-size: 35px;
+  color: #fff;
+  line-height: 44px;
+}
+
+header h2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #fff;
+  text-align: center;
+  line-height: 44px;
+  font-size: 20px;
+}
+
+header .icon-app {
+  width: 50px;
+  background: url("https://img.alicdn.com/imgextra/i2/690311/TB2beKvaTXYBeNkHFrdXXciuVXa_!!690311.png");
+  background-size: 43px 35px;
+  background-origin: content-box;
+  background-clip: content-box;
+  padding: 5px;
+}
+/*# sourceMappingURL=moneyID.css.map */
