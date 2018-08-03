@@ -46,7 +46,7 @@ header .icon-app {
 }
 
 .view .view_head {
-  font-size: 12px;
+  font-size: 11px;
   color: #777;
 }
 
@@ -82,7 +82,7 @@ header .icon-app {
 .view #disstorck a {
   border-bottom: 1px solid #ccc;
   padding: 0 10px;
-  width: 100%;
+  width: 60%;
   display: block;
 }
 

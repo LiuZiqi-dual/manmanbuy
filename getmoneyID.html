@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="./favicon.ico">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/moneyID.css">
-    <title>最新优惠 - 省钱控 - 慢慢买</title>
+    <!-- <title>最新优惠 - 省钱控 - 慢慢买</title> -->
 </head>
 
 <body>
@@ -31,6 +31,7 @@
 <script src="./js/jquery-1.12.2.min.js"></script>
 <script src="js/template-web.js"></script>
 <script src="./js/getmoneyID.js"></script>
+<!-- 商品详情动态渲染 -->
 <script type="text/template" id="item">
     {{each data val}}
     <div class="view_head">
@@ -52,5 +53,8 @@
     </div>
     {{/each}}
 </script>
-
+<!-- title标题动态内容 -->
+<script type="text/template" id="title">
+   <title>{{data}}</title>
+</script>
 </html>
