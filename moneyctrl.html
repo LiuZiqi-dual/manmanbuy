@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <link rel="shortcut icon" href="./favicon.ico">
     <link rel="stylesheet" href="./css/base.css">
@@ -15,11 +15,11 @@
 <body>
     <!-- 头部标题 -->
     <header id="backTop">
-        <a href="javascript:;" class="a_icon">
+        <a href="./index.html" class="a_icon">
             <i class="iconfont">&#xe697;</i>
         </a>
         <h2>省钱控 - 最新优惠</h2>
-        <a href="javascript:;" class="icon-app"></a>
+        <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap" class="icon-app"></a>
     </header>
     <!-- 商品项目 -->
     <div class="view">
@@ -45,13 +45,17 @@
           <footer>
               <!-- 分页功能开始 -->
               <div class="foot_next">
+                <a href="#backTop">
                   <button class="prev">上一页</button>
+                </a>
                   <div class="select_box">
                   <select name="" id="select"> 
 
                   </select>
                   </div>
+                <a href="#backTop">
                   <button class="next">下一页</button>
+                </a>
               </div>
               <!-- 导航跳转 -->
               <div class="foot_nav">
@@ -84,6 +88,7 @@
 </html>
 <script src="js/jquery-1.12.2.min.js"></script>
 <!-- 模板文件 -->
+<script src="lib/tap-swpie.js"></script>
 <script src="lib/提示信息插件/layer.js"></script>
 <script src="./art-template/template-web.js"></script>
 <script src="./js/public.js"></script>
@@ -92,7 +97,7 @@
 <script type="text/template" id="template">
     {{each data val key}}
     <li>
-        <a href="javascript:;" class="clearfix">
+        <a href="./getmoneyID.html?moneyID={{val.productId}}" class="clearfix">
             <div class="banner_img">
                 <!-- {{val.productImgSm}} -->
                 {{@val.productImgSm}}
