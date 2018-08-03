@@ -4,7 +4,7 @@ $.ajax({
     // data: "data",
     dataType: "json",
     success: function (res) {
-        console.log(res.result);
+        // console.log(res.result);
         $('.cat_nav').html(template('cat_nav_template',{
             res:res.result
         }));
@@ -13,4 +13,6 @@ $.ajax({
 $.get("http://193.112.55.79:9090/api/getmoneyctrl",'',function(res){
     var html = template("template",{data:res.result});     
     $('.shangping ul').html(html);    
+    // console.log(res);
+    
 },'json')
