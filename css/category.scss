@@ -1,0 +1,72 @@
+body {
+    /* 搜索框部分开始 */
+    .search {
+        padding: 10px;
+        height: 50px;
+        border-bottom: 1px solid #E6E6E6;
+        margin-bottom: 5px;
+        .search_box {
+            position: relative;
+            height: 30px;
+            background-color: #F1F1F1;
+            border-radius: 15px;
+            padding-right: 64px;
+            input {
+                width: 100%;
+                height: 100%;
+                background-color: transparent;
+                border: 0px solid transparent;
+                padding-left: 20px;
+                font-size: 16px;
+                outline: none;
+            }
+            button {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                width: 64px;
+                height: 30px;
+                line-height: 100%;
+                background-color: #FF841D;
+                border: 0px solid transparent;
+                border-radius: 15px;
+                font-size: 16px;
+                color: #fff;
+                outline: none;
+            }
+        }
+    }
+    /* 搜索框部分结束 */
+    
+    /* 比价分类部分开始 */
+    .category_container{
+        margin-top: -5px;
+        padding: 0px 10px;
+        background-color: #EDEDED;
+        ul{
+            li{
+                border-bottom: 1px solid #CCCCCC;
+                height: 40px;
+                line-height: 40px;
+                a{
+                    display: block;
+                    height: 100%;
+                    width: 100%; 
+                    color:#000;
+                    h3{
+                        margin: 0;
+                        padding: 0;
+                        height: 100%;
+                        line-height: 40px;
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                    .cat_detail{
+
+                    }
+                }
+            }
+        }
+    }
+    /* 比价分类部分结束 */
+}

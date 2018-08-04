@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/moneyID.css">
+    <!-- <title>最新优惠 - 省钱控 - 慢慢买</title> -->
+</head>
+
+<body>
+    <!-- 头部标题 -->
+    <header id="backTop">
+        <a href="./moneyctrl.html" class="a_icon">
+            <i class="iconfont">&#xe697;</i>
+        </a>
+        <h2>国内折扣</h2>
+        <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap" class="icon-app"></a>
+    </header>
+    <!-- 头部标题完成 -->
+    <!-- 开始主体内容渲染 -->
+    <div class="view">
+
+    </div>
+    <!-- 结束主体内容渲染 -->
+          <!-- 前往购买 -->
+          <div class="Gobuy">
+            <a href="javascript:;">
+                <i class="iconfont">&#xe635;</i>
+                <span>前往下载</span>
+            </a>
+        </div>
+        <!-- 二维码 -->
+        <div class="Gobuy_banner">
+            <img src="./images/mmbweixin2.png" alt="">
+        </div>
+</body>
+<script src="./js/jquery-1.12.2.min.js"></script>
+<script src="js/template-web.js"></script>
+<script src="./js/getmoneyID.js"></script>
+<!-- 商品详情动态渲染 -->
+<script type="text/template" id="item">
+    {{each data val}}
+    <div class="view_head">
+        <h2>{{val.productName}}</h2>
+    </div>
+    <div class="produForm">
+        <span>{{val.productFrom}} </span>
+        <span>{{val.productTime}}</span>
+        <span>{{val.productTips}}</span>
+    </div>
+    <div class="view_conn clearfix">
+        <div class="view_conn_img">{{@ val.productImg2}}</div>
+        <p>{{val.productInfo2}}</p>
+        <p>{{val.productInfo1}}</p>
+        <div class="view_comm_lg">
+            {{@val.productImgSm}}
+        </div>
+        {{@val.productCity}}
+    </div>
+    {{/each}}
+</script>
+<!-- title标题动态内容 -->
+<script type="text/template" id="title">
+    <title>{{data}}</title>
+</script>
+<script type="text/template" id="pinglun">
+   {{@data}}
+</script>
+</html>
