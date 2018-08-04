@@ -65,6 +65,7 @@ body .cat_nav div {
 }
 
 body .cat_nav div a {
+  height: 90px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -73,13 +74,15 @@ body .cat_nav div a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 body .cat_nav div a img {
-  width: 70px;
+  width: 50px;
 }
 
 body .cat_nav div a span {
