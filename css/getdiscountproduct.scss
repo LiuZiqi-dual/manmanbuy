@@ -1,6 +1,16 @@
 #backTop {
     .logo {
         width: 20%;
+        padding-top:20px;
+        .icon_back_top{
+            font-family: "iconfont" !important;
+            line-height: 0;
+            font-size: 30px;
+            font-style: bold;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 0.2px;
+            -moz-osx-font-smoothing: grayscale;
+        }
     }
     p {
         display: block;
@@ -16,20 +26,24 @@
 .getdiscountproduct {
     display: flex;
     flex-wrap: wrap;
-    position: relative;
+    width:100%;
+    // position: relative;
+    // flex-direction: column;
+    // margin-left:10px;
+    padding:20px 0 50px 10px;
     h2 {
-        width: 100%;
+        // width: 100%;
         font-size: 22px;
         font-weight: 600;
     }
     strong {
-        width: 100%;
+        // width: 100%;
         color: orange;
         font-size: 14px;
     }
     .laiyuan {
         height: 50px;
-        width: 100%;
+        // width: 100%;
         display: flex;
         align-items: center;
         color: #ccc;
@@ -43,51 +57,64 @@
         }
     }
     .pl{
-        height: 400px;
         width: 90%;
-        margin-top:50px;
         // 发表评论
         .tit{
             font-size: 16px;
             font-weight: 600;
+            margin-top:30px;
+            margin-bottom:5px;
         }
         // 文本域提交评论
-        .replay{
+        .reply{
+            outline:1px solid #ccc;
+            width:100%; 
             .form{
+                height:140px;
+                // width:99%;
+                display: flex;
+                flex-direction: column;
                 textarea{
-                    width:90%;
+                    border:none;
+                    width:100%;
+                    flex:1;
                 }
                 // 提交按钮
                 .ctrl{
-                    background-color: orange;
+                    width:100%;
+                    height:40px;
+                    background-color: #fbfbfb;
+                    display: flex;
+                    justify-content: flex-end;
+                    input{
+                        color:#fff;
+                        border:none;
+                        height:100%;
+                        width:90px;
+                        background-color: #ff841d;
+                    }
                 }
             }
         }
         // 最新评论标题
         #newcomment{
             height:20px;
-        }
-        // 评论
-        .list{
-            ul{
-                li{
-
-                }
-            }
+            margin-top:10px;
         }
     }
-    .gm {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        a{
-            display: block;
-            height: 40px;
-            color: #fff;
-            font-size: 16px;
-            text-align: center;
-            line-height: 40px;
-            background-color: orange;
-        }
+}
+.gm {
+    // position: absolute;
+    // bottom: 0;
+    padding:0;
+    width: 100%;
+    a{
+        display: block;
+        height: 40px;
+        color: #fff;
+        font-size: 16px;
+        text-align: center;
+        line-height: 40px;
+        background-color: orange;
     }
 }

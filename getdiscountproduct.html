@@ -36,6 +36,12 @@
     <!-- 模板内容 -->
     <div class="getdiscountproduct"></div>
     <!-- 模板内容结束 -->
+        <!-- 购买按钮 -->
+        <div class="gm">
+            <a href="javascript:;">确认购买</a>
+        </div>
+
+        <!-- 购买按钮结束 -->
     <!-- footer部分开始 -->
     <footer>
         <div class="foot_func">
@@ -80,7 +86,7 @@
         $.get("http://193.112.55.79:9090/api/getdiscountproduct?productid=" + id + "", function (res) {
             // 设置模板
             var data = template("temp", res);
-            // 把模板追加到盒子去
+            // // 把模板追加到盒子去
             $(".getdiscountproduct").html(data);
             // console.log(res);
         }, "json")
@@ -107,10 +113,6 @@
     <!-- 评论，因没有城市库存，从而将评论与商品详情放在一起 -->
     <div class="pl">
             <%- value.productComment %>
-    </div>
-    <!-- 购买按钮 -->
-    <div class="gm">
-        <a href="javascript:;">确认购买</a>
     </div>
     {{/each}}
 </script>
