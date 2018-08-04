@@ -26,46 +26,47 @@
     <div class="view">
         <div class="shangping">
             <ul>
-                
+
             </ul>
         </div>
     </div>
-          <!-- 固定下载连接部分开始 -->
-          <div class="market">
-            <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap">
-              <img src="./images/market.png" alt="">
-            </a>
-          </div>
-          <div class="back_top_btn">
+    <!-- 固定下载连接部分开始 -->
+    <div class="market">
+        <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap">
+            <img src="./images/market.png" alt="">
+        </a>
+    </div>
+    <div class="back_top_btn">
+        <a href="#backTop">
+            一
+            <i class="iconfont icon_dibu">&#xe6a5;</i>
+        </a>
+    </div>
+    <!-- 固定下载连接部分结束 -->
+    <!-- footer部分开始 -->
+    <footer>
+        <!-- 分页功能开始 -->
+        <div class="foot_next">
             <a href="#backTop">
-              一<i class="iconfont icon_dibu">&#xe6a5;</i>
+                <button class="prev">上一页</button>
             </a>
-          </div>
-          <!-- 固定下载连接部分结束 -->
-          <!-- footer部分开始 -->
-          <footer>
-              <!-- 分页功能开始 -->
-              <div class="foot_next">
-                <a href="#backTop">
-                  <button class="prev">上一页</button>
-                </a>
-                  <div class="select_box">
-                  <select name="" id="select"> 
+            <div class="select_box">
+                <select name="" id="select">
 
-                  </select>
-                  </div>
-                <a href="#backTop">
-                  <button class="next">下一页</button>
-                </a>
-              </div>
-              <!-- 导航跳转 -->
-              <div class="foot_nav">
-                  <a href="./index.html">首页 > </a>&nbsp;
-                  <a href="./moneyctrl.html">省钱控</a>
-              </div>
-              <!-- 分页功能结束 -->
-            <div class="foot_func">
-              <div class="login">
+                </select>
+            </div>
+            <a href="#backTop">
+                <button class="next">下一页</button>
+            </a>
+        </div>
+        <!-- 导航跳转 -->
+        <div class="foot_nav">
+            <a href="./index.html">首页 > </a>&nbsp;
+            <a href="./moneyctrl.html">省钱控</a>
+        </div>
+        <!-- 分页功能结束 -->
+        <div class="foot_func">
+            <div class="login">
                 <a href="login.html">登录</a>
             </div>
             <div class="signin">
@@ -104,14 +105,17 @@
                 <!-- {{val.productImgSm}} -->
                 {{@val.productImgSm}}
             </div>
-            <div class="banner_text"> {{val.productName}}
-                <span> {{val.productPinkage}}</span>
-            </div>
-            <div class="banner_time">
-                <span class="proFrom">{{val.productFrom}} </span>|
-                <em> {{val.productTime}}</em>
-                <div class="proCount">
-                    <i class="iconfont2">&#xe621;</i>{{val.productComCount}}</div>
+            <div class="banner_status">
+                <div class="banner_text"> {{val.productName}}
+                    <span> {{val.productPinkage}}</span>
+                </div>
+                <div class="banner_time">
+                    <span class="proFrom">{{val.productFrom}} </span>|
+                    <em> {{val.productTime}}</em>
+                    <div class="proCount">
+                        <i class="iconfont2">&#xe621;</i>{{val.productComCount}}
+                    </div>
+                </div>
             </div>
         </a>
     </li>

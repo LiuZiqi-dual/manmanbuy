@@ -44,6 +44,11 @@ header .icon-app {
   border-bottom: 1px solid #ccc;
 }
 
+.shangping li a {
+  width: 100%;
+  height: 100%;
+}
+
 .shangping li a .banner_img {
   width: 100px;
   height: 100px;
@@ -56,24 +61,37 @@ header .icon-app {
   height: 100%;
 }
 
-.shangping li a .banner_text {
+.shangping li a .banner_status {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.shangping li a .banner_status .banner_text {
   color: #3f3f3f;
 }
 
-.shangping li a .banner_text span {
+.shangping li a .banner_status .banner_text span {
   color: #ff7e1f;
 }
 
-.shangping li a .banner_time {
-  margin-top: 5%;
+.shangping li a .banner_status .banner_time {
   font-size: 12px;
 }
 
-.shangping li a .banner_time .proCount {
+.shangping li a .banner_status .banner_time .proCount {
   float: right;
 }
 
-.shangping li a .banner_time .proCount i {
+.shangping li a .banner_status .banner_time .proCount i {
   vertical-align: middle;
 }
 

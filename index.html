@@ -36,12 +36,12 @@
     <div class="search_box">
       <input type="text" placeholder="搜索您心仪的商品，会有惊喜哦！">
       <button>搜索</button>
-    </div>  
+    </div>
   </div>
   <!-- 搜索框部分结束 -->
   <!-- 分类导航页面开始 -->
   <div class="cat_nav">
-    
+
   </div>
   <!-- 分类导航页面结束 -->
   <!-- 超值折扣推荐部分开始 -->
@@ -56,9 +56,9 @@
     </div>
     <div class="view">
       <div class="shangping">
-          <ul>
-              
-          </ul>
+        <ul>
+
+        </ul>
       </div>
     </div>
     <ul>
@@ -91,7 +91,8 @@
   </div>
   <div class="back_top_btn">
     <a href="#backTop">
-      一<i class="icon_back_top">&#xe6a5;</i>
+      一
+      <i class="icon_back_top">&#xe6a5;</i>
     </a>
   </div>
   <!-- 底部固定部分结束 -->
@@ -111,7 +112,8 @@
       </div>
     </div>
     <div class="copyright">
-      <p><a href="http://m.manmanbuy.com/app.html?type=headword&value=wap">手机APP下载</a>慢慢买手机版 -- 掌上比价平台</p>
+      <p>
+        <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap">手机APP下载</a>慢慢买手机版 -- 掌上比价平台</p>
       <p>m.manmanbuy.com</p>
     </div>
   </footer>
@@ -129,9 +131,9 @@
     <a href={{val.titlehref}}>
       {{@val.img}}
       <span>
-      {{val.name}}  
+        {{val.name}}
       </span>
-    </a>  
+    </a>
   </div>
   {{/each}}
 </script>
@@ -139,22 +141,25 @@
 <script type="text/template" id="template">
   {{each data val key}}
   <li>
-      <a href="./getmoneyID.html?productid={{val.productId}}" class="clearfix">
-          <div class="banner_img">
-              <!-- {{val.productImgSm}} -->
-              {{@val.productImgSm}}
-          </div>
-          <div class="banner_text"> {{val.productName}}
-              <span> {{val.productPinkage}}</span>
-          </div>
-          <div class="banner_time">
-              <span class="proFrom">{{val.productFrom}} </span>|
-              <em> {{val.productTime}}</em>
-              <div class="proCount">
-                  <i class="iconfont2">&#xe621;</i>{{val.productComCount}}</div>
-          </div>
-      </a>
+    <a href="./getmoneyID.html?productid={{val.productId}}" class="clearfix">
+      <div class="banner_img">
+        <!-- {{val.productImgSm}} -->
+        {{@val.productImgSm}}
+      </div>
+      <div class="banner_status">
+        <div class="banner_text"> {{val.productName}}
+          <span> {{val.productPinkage}}</span>
+        </div>
+        <div class="banner_time">
+          <span class="proFrom">{{val.productFrom}} </span>|
+          <em> {{val.productTime}}</em>
+          <div class="proCount">
+            <i class="iconfont2">&#xe621;</i>{{val.productComCount}}</div>
+        </div>
+      </div>
+    </a>
   </li>
   {{/each}}
 </script>
+
 </html>

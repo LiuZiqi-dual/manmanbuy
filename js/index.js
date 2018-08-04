@@ -11,7 +11,12 @@ $.ajax({
     }
 });
 $.get("http://193.112.55.79:9090/api/getmoneyctrl",'',function(res){
-    var html = template("template",{data:res.result});     
+    var num = [];
+    for(var i = 0;i<res.result.length;i++){
+        num.push(parseInt(res.result[i].productComCount.replace(/[^0-9]/ig,"")));
+        res.result[i].productComCount = num[i];
+    };
+    var html = template("template",{data:res.result});  
     $('.shangping ul').html(html);    
     // console.log(res);
     

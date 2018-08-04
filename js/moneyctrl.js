@@ -10,7 +10,7 @@ function ajax(){
         for(var i = 0;i<res.result.length;i++){
              num.push(parseInt(res.result[i].productComCount.replace(/[^0-9]/ig,"")));
              res.result[i].productComCount = num[i];
-        }      
+        }
         for(var e = 0;e<res.totalCount+1;e++){
             num2.push(res.totalCount);      
         }     
