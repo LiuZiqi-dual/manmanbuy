@@ -1,26 +1,26 @@
-¼òµ¥µÄgit²Ù×÷ÃüÁî
+ç®€å•çš„gitæ“ä½œå‘½ä»¤
 
-À­È¡
-git pull origin master		£¨À­È¡GitHubÔ¶³Ì¿âÖĞµÄÄÚÈİ£©
-				£¨*pullÃüÁî°üº¬ÁËfetch£¨ÏÂÔØ£©ºÍmerge£¨ºÏ²¢£©£¬Òò´Ë»á×Ô¶¯ºÏ²¢Ö®Ç°ÒÑÓĞµÄÎÄ¼ş£©
-ÍÆËÍ
-git add .			£¨Ìí¼ÓÎÄ¼şµ½»º³åÇø£©
-git commit -m "£¨±¸×¢ÄÚÈİ£©"	£¨Ìá½»±¸×¢£©
-git push			£¨ÍÆËÍ£©
+æ‹‰å–
+git pull origin master		ï¼ˆæ‹‰å–GitHubè¿œç¨‹åº“ä¸­çš„å†…å®¹ï¼‰
+				ï¼ˆ*pullå‘½ä»¤åŒ…å«äº†fetchï¼ˆä¸‹è½½ï¼‰å’Œmergeï¼ˆåˆå¹¶ï¼‰ï¼Œå› æ­¤ä¼šè‡ªåŠ¨åˆå¹¶ä¹‹å‰å·²æœ‰çš„æ–‡ä»¶ï¼‰
+æ¨é€
+git add .			ï¼ˆæ·»åŠ æ–‡ä»¶åˆ°ç¼“å†²åŒºï¼‰
+git commit -m "ï¼ˆå¤‡æ³¨å†…å®¹ï¼‰"	ï¼ˆæäº¤å¤‡æ³¨ï¼‰
+git push			ï¼ˆæ¨é€ï¼‰
 
-***½¨ÒéÔÚpush´úÂëÖ®Ç°ÏÈpullÏÂÀ´Ò»±é×îĞÂµÄÔ¶³Ì¿âÄÚÈİ£¬¾¡¿ÉÄÜ½µµÍgitµÄ±¨´í¼¸ÂÊ
+***å»ºè®®åœ¨pushä»£ç ä¹‹å‰å…ˆpullä¸‹æ¥ä¸€éæœ€æ–°çš„è¿œç¨‹åº“å†…å®¹ï¼Œå°½å¯èƒ½é™ä½gitçš„æŠ¥é”™å‡ ç‡
 
-³£¼û±¨´í£º
-ÌáÊ¾³ö´íĞÅÏ¢£ºerror:failedto push som refs to .......
-½â¾ö°ì·¨£º	
-	1¡¢ÏÈÊäÈë$ git pullorigin master //ÏÈ°ÑÔ¶³Ì·şÎñÆ÷githubÉÏÃæµÄÎÄ¼şÀ­ÏÂÀ´
-	2¡¢ÔÙÊäÈë$ git pushorigin master
-	3¡¢Èç¹û³öÏÖ±¨´í fatal:Couldn't find remote ref master»òÕßfatal: 'origin' doesnot appear to be a git repositoryÒÔ¼°fatal: Could notread from remote repository.
-	4¡¢ÔòĞèÒªÖØĞÂÊäÈë$ git remoteadd origingit@github.com:djqiang/gitdemo.git
+å¸¸è§æŠ¥é”™ï¼š
+æç¤ºå‡ºé”™ä¿¡æ¯ï¼šerror:failedto push som refs to .......
+è§£å†³åŠæ³•ï¼š	
+	1ã€å…ˆè¾“å…¥$ git pullorigin master //å…ˆæŠŠè¿œç¨‹æœåŠ¡å™¨githubä¸Šé¢çš„æ–‡ä»¶æ‹‰ä¸‹æ¥
+	2ã€å†è¾“å…¥$ git pushorigin master
+	3ã€å¦‚æœå‡ºç°æŠ¥é”™ fatal:Couldn't find remote ref masteræˆ–è€…fatal: 'origin' doesnot appear to be a git repositoryä»¥åŠfatal: Could notread from remote repository.
+	4ã€åˆ™éœ€è¦é‡æ–°è¾“å…¥$ git remoteadd origingit@github.com:djqiang/gitdemo.git
 
 ...
 
-²¹³ä£ºÉÆÓÃ°Ù¶È
+è¡¥å……ï¼šå–„ç”¨ç™¾åº¦
 
 
 

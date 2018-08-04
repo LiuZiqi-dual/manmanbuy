@@ -56,6 +56,7 @@ body .market a img {
 body footer {
   background-color: #EFEFEF;
   overflow: hidden;
+  width:100%;
 }
 
 body footer .foot_func {

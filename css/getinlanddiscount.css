@@ -1,4 +1,19 @@
 @charset "UTF-8";
+#backTop .logo {
+  width: 20%;
+}
+
+#backTop p {
+  display: block;
+  float: left;
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+  line-height: 50px;
+}
+
 .getinlanddiscount ul li {
   float: left;
   width: 50%;
