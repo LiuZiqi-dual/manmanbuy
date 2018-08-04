@@ -52,25 +52,26 @@ body .category_container {
   background-color: #EDEDED;
 }
 
-body .category_container ul li {
+body .category_container .panel-heading {
   border-bottom: 1px solid #CCCCCC;
   height: 40px;
   line-height: 40px;
 }
 
-body .category_container ul li a {
-  display: block;
+body .category_container .panel-heading a {
   height: 100%;
   width: 100%;
-  color: #000;
+  color: #333333;
 }
 
-body .category_container ul li a h3 {
+body .category_container .panel-heading a h5 {
   margin: 0;
   padding: 0;
-  height: 100%;
-  line-height: 40px;
   font-size: 18px;
   font-weight: 600;
+}
+
+body .category_container .panel-heading a .cat_detail {
+  height: 16px;
 }
 /*# sourceMappingURL=category.css.map */

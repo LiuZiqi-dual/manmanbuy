@@ -43,9 +43,7 @@
 
   <!-- 比价分类部分开始 -->
   <div class="category_container">
-    <ul>
 
-    </ul>
   </div>
   <!-- 比价分类部分结束 -->
 
@@ -91,16 +89,46 @@
 <script src="./lib/bootstrap/js/bootstrap.js"></script>
 <script src="./js/template-web.js"></script>
 <script src="./js/public.js"></script>
+<script src="./lib/tap-swpie.js"></script>
 <script src="./js/category.js"></script>
+
 <!-- 比价分类页面模板 -->
 <script type="text/template" id="category_template">
-  {{each res val key}}
-  <li class="align-center">
-    <a href="category/?"+{{val.titleId}}+"" class="clearfix">
-      <h3 class="pull-left">{{val.title}}</h3>
-      <i class="iconfont cat_detail pull-right">&#xe6a6;</i>
-    </a>
-  </li>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      {{each res val key}}
+    <input type="hidden" value="{{val.titleId}}">  
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne{{val.titleId}}">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne{{val.titleId}}" aria-expanded="false" aria-controls="collapseOne{{val.titleId}}"
+          class="collapsed clearfix">
+            <h5 class="pull-left">
+              {{val.title}}
+            </h5>
+            <i class="iconfont cat_detail pull-right">&#xe6a6;</i>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne{{val.titleId}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne{{val.titleId}}">
+        <div class="panel-body">
+          内容
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
+</script>
+
+<!-- 比价分类详细信息模板 -->
+<script type="text/template" id="category_detail_template">
+<ul>
+  {{each data val key}}
+    <li>{{val.category}}</li>
   {{/each}}
+</ul>
+
+
+
 </script>
 </html>
