@@ -6,7 +6,7 @@ $.ajax({
     url: 'http://193.112.55.79:9090/api/getcategorytitle',
     dataType: 'json',
     success: function (res) {
-        // console.log(res.result);
+        console.log(res.result);
         // console.log(template('category_template', {
         //     res: res.result
         // }));
@@ -15,13 +15,13 @@ $.ajax({
         }))
         var tapEvent = $('.panel-heading');
         tapEvent.each(function (index, ele) {
-            console.log(this);
+            // console.log(this);
             itcast(this).tap(function (e) {
                 // console.log(e.path);
                 // console.log(index);
                 $.get("http://193.112.55.79:9090/api/getcategory", 'titleid=' + index,
                     function (data) {
-                        console.log(data);
+                        console.log(data.result);
                         // console.log(titleid-1+2);
                         // var listNum = $('.panel-body:nth-child('+(titleid-1+2)+')');
                         // listNum.append(template('category_detail_template',{
