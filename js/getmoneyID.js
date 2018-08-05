@@ -14,6 +14,16 @@
             $('head').append(title);
             // 评论模板
             var pinglun = template("pinglun",{data:res.result[0].productComment});
-            $("body").append(pinglun)
+            $(".pinglun").append(pinglun);
+            //评论
+            
+             //评论功能
+    var input =  document.querySelector('.ctrl input');
+    itcast(input).tap(function(e){
+        //获取上面输入的内容   判断不能为空
+
+        
+    })
      },'json')
  }
+
