@@ -21,7 +21,7 @@
     var input =  document.querySelector('.ctrl input');
     itcast(input).tap(function(e){
         //获取上面输入的内容   判断不能为空
-
+     
         
     })
      },'json')
