@@ -1,5 +1,6 @@
 //pageid=5   刷新到第几页  41-50   最多到14
-var pageid = pageid || 0;
+
+var pageid = location.search.substr(8) || 0;
 ajax();
 function ajax(){
     $.get("http://193.112.55.79:9090/api/getmoneyctrl",'pageid='+pageid,function(res){
@@ -14,6 +15,10 @@ function ajax(){
         for(var e = 0;e<res.totalCount+1;e++){
             num2.push(res.totalCount);      
         }     
+        //点进去传入id  出来的时候返回
+        for(var i = 0; i<res.result.length;i++){
+            res.result[i]['name']=pageid;
+        } 
         //基本数据渲染页面
         var html = template("template",{data:res.result});     
         $('.shangping ul').html(html);    
@@ -52,6 +57,11 @@ $("#select").on('change',function(){
     var val = this.value-1;
     pageid = val;
     ajax();
+    //调到顶部
+    $(window).scrollTop(0);
+    
+
+   
 })
 
 

@@ -100,9 +100,8 @@
 <script type="text/template" id="template">
     {{each data val key}}
     <li>
-        <a href="./getmoneyID.html?productid={{val.productId}}" class="clearfix">
+        <a href="./getmoneyID.html?fenye={{val.name}}&productid={{val.productId}}" class="clearfix">
             <div class="banner_img">
-                <!-- {{val.productImgSm}} -->
                 {{@val.productImgSm}}
             </div>
             <div class="banner_status">
@@ -126,4 +125,5 @@
     {{each data val key}}
     <option value="{{key+1}}">{{"第"+(key+1)+"页"}}/{{'共'+(val+1)+'页'}}</option>
     {{/each}}
+
 </script>
