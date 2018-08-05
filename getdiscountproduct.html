@@ -40,7 +40,6 @@
         <div class="gm">
             <a href="javascript:;">确认购买</a>
         </div>
-
         <!-- 购买按钮结束 -->
     <!-- footer部分开始 -->
     <footer>
@@ -88,8 +87,11 @@
             var data = template("temp", res);
             // // 把模板追加到盒子去
             $(".getdiscountproduct").html(data);
-            // console.log(res);
-        }, "json")
+        }, "json");
+        $(".logo").on("click",function(){
+            // window.
+            location.href="getinlanddiscount.html"
+        })
     })
 </script>
 </html>
@@ -110,6 +112,7 @@
         <p>{{value.productInfo}}</p>
         <%- value.productImg %>
     </div>
+    <img src="images/mmbweixin2.png" alt="">
     <!-- 评论，因没有城市库存，从而将评论与商品详情放在一起 -->
     <div class="pl">
             <%- value.productComment %>

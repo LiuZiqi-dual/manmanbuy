@@ -83,8 +83,8 @@ body {
     .foot_func {
       margin-top: 10px;
       height: 36px;
-      display: flex;
-      border: 1px solid #C4C4C4;
+      display: flex; 
+      outline: 1px solid #C4C4C4;
       a {
         height: 100%;
         display: flex;
