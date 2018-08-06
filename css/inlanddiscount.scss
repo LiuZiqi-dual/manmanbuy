@@ -24,8 +24,78 @@
         line-height: 50px;
     }
 }
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    // overflow: scroll;
+    display: flex;
+    flex-direction: column;
+}
+#show{
+	display:none;	
+  }
+#pullDown, #pullUp {
+	background:#fff;
+	height:40px;
+	font-weight:bold;
+	font-size:14px;
+	color:#888;
+}
+#scroller {
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	width:100%;
+}
+#wrapper {
+margin-bottom: -39px;
+flex: 1;
+}
+
+#pullDown .pullDownIcon, #pullUp .pullUpIcon  {
+	display:block; float:left;
+	width:40px; height:40px;
+	background:url("../images/pull-icon@2x.png") 0 0 no-repeat;
+	-webkit-background-size:40px 80px; background-size:40px 80px;
+	-webkit-transition-property:-webkit-transform;
+	-webkit-transition-duration:250ms;	
+}
+#pullDown .pullDownIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+#pullUp .pullUpIcon  {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullDown.flip .pullDownIcon {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullUp.flip .pullUpIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+
+#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+	background-position:0 100%;
+	-webkit-transform:rotate(0deg) translateZ(0);
+	-webkit-transition-duration:0ms;
+
+	-webkit-animation-name:loading;
+	-webkit-animation-duration:2s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+}
+
+@-webkit-keyframes loading {
+	from { -webkit-transform:rotate(0deg) translateZ(0); }
+	to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+.dvg{
+    height: 80px;
+    background-color: rgba($color: #fff, $alpha: .0);
+}
 .getinlanddiscount {
-    ul {
+    #thelist {
         li {
             float: left;
             width: 50%;
@@ -39,8 +109,7 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 img {
-                    height: 62%;
-                    // width: 100%;
+                    height: 62%; 
                 }
                 strong {
                     height: 18%;
@@ -84,3 +153,9 @@
     }
 }
 
+// footer{
+//     width: 100%;
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+// }

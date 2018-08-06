@@ -60,13 +60,21 @@
 }
 
 .getdiscountproduct .content {
-  height: 300px;
+  width: 70%;
 }
 
 .getdiscountproduct .content p {
   font-size: 16px;
-  width: 70%;
   margin-bottom: 10px;
+}
+
+.getdiscountproduct .content div {
+  height: 210px;
+}
+
+.getdiscountproduct .content div img {
+  display: block;
+  height: 100%;
 }
 
 .getdiscountproduct > img {
