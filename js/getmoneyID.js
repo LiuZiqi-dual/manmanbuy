@@ -58,10 +58,14 @@ productid  = productid - 1 +1;
     
      },'json')
  }
- 
- $('#backTop a').on('click',function(){
-     location.href = "./moneyctrl.html?nameId="+nameId+"&pageY="+pageY;
- })
+ //返回页面带过去id  和点击进来的位置
+ var a = document.querySelector('#backTop a');
+   itcast(a).tap(function(){
+    location.href = "./moneyctrl.html?nameId="+nameId+"&pageY="+pageY;
+    
+   })
+     
+
 
 
     
