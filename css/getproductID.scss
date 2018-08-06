@@ -3,11 +3,11 @@ body{
 }
 .view{
     .head{
-        padding:10px 10%;
+        padding:10px 5%;
         background:#efefef;
         a{
             color:#5a5757;
-            font-size: 16px;
+            font-size: 14px;
         }
     }
     // 电视广告
@@ -54,7 +54,7 @@ body{
     }
 }
 table{
-    padding:0 5px;
+    padding:5px 5px;
     border-bottom:1px solid #bfbcbc;
     tbody{
         tr:nth-child(1){
@@ -62,9 +62,12 @@ table{
                 vertical-align: baseline;
             }
             td:nth-child(2){
-                padding-right:25%;
+                // padding-right:20%;
                 a{
+                    padding-right:25%;
                     color:#000;
+                    width:100%;
+                    display:block;
                 }
             }
             td:nth-child(3){
@@ -87,6 +90,12 @@ table{
         text-align: center;
         background:#dbdbdb;
     } 
+    .Net_firend_from{
+        padding-top:10px;
+    }
+    .Net_firend_time{
+        padding-top:5px;
+    }
     .Net_firend{
         padding:0 12px;
         .Net_firend_content{
@@ -97,4 +106,13 @@ table{
             margin-bottom:5px;
         }
     }
+}
+// 查看更多评论
+.gengduo{
+    margin:15px 5px;
+    padding:10px 0;
+    text-align: center;
+    background:#e5e5e5;
+    border-radius: 15px;
+    color:#000;
 }
