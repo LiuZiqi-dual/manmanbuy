@@ -12,9 +12,27 @@
  productId = productId - 1 + 1;
  productId = productId || 0;
  getproductId();
+ getproductPinglun();
  function getproductId(){
     $.get("http://193.112.55.79:9090/api/getproduct","productid="+productId,function(res){
         //  console.log(res.result[0]);
-         
+        //渲染数据 电视广告
+        var banner_img = template("banner_img",{data:res.result[0]})
+         $(".banner").html(banner_img);
+
+         //截取做三级动态标题
+      var productName = res.result[0].productName;
+      var  arr = productName.split(' ');
+         $(".head").append("<a href='#'>"+arr[0]+"</a>")
      })
+ }
+//  发送ajax   获取评论的数据
+
+ function getproductPinglun(){
+    $.get("http://193.112.55.79:9090/api/getproductcom","productid="+productId,function(res){      
+    var Net_firend_html = template("Net_firend",{data:res.result});
+      $(".Net_firend").html(Net_firend_html);
+  
+    
+    })
  }
