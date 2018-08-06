@@ -92,7 +92,13 @@
 <script type="text/template" id="title">
     <title>{{data}}</title>
 </script>
+<!-- 渲染全部评论 -->
 <script type="text/template" id="pinglun">
    {{@data}}
+</script>
+<!-- 渲染添加的评论 -->
+<script type="text/template" id="add_pinglun">
+     <li class="ui-border-b"><div class="userimg"><img src="images/boduo.png"></div><div class="con"><div class="name clearfix"><div class="username">没有登陆的用户</div><div class="time">{{data[0]}}</div></div><div class="content">{{data[1]}}</div></div>
+     </li>
 </script>
 </html>

@@ -33,10 +33,29 @@ productid  = productid - 1 +1;
             //评论
             
              //评论功能
-    var input =  document.querySelector('.ctrl input');
-    itcast(input).tap(function(e){
+        var input =  document.querySelector('.ctrl input');
+        itcast(input).tap(function(e){
         //获取上面输入的内容   判断不能为空   
+        var val = $("#ctl00_ContentBody_txt_nr").val();
+        if($.trim(val)==''){
+            return;
+        }else{
+             var add_pinglun = [];
+           //不为空，动态生成一个评论
+            var myDate = new Date().toLocaleString();//获取系统当前时间
+            // console.log(myDate.toLocaleString()); 2018/8/6 上午9:51:15
+           add_pinglun.push(myDate);
+           add_pinglun.push(val)
+
+           var add_pinglun_html = template("add_pinglun",{data:add_pinglun});
+           $('.list ul').prepend(add_pinglun_html);
+           $("#ctl00_ContentBody_txt_nr").val('');
+        //    console.log(add_pinglun);
+           
+           
+        }     
     })
+    
      },'json')
  }
  
