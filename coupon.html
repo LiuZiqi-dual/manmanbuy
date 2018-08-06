@@ -86,7 +86,7 @@
 <script type="text/template" id="getcoupontitleTmp">
     {{ each data value }}
     <li>
-        <a href="{{value.couponLink}}">
+        <a href="{{value.couponLink}}?couponId={{value.couponId}}">
             <img src="{{value.couponImg}}" alt="">
             <p>{{value.couponTitle}}</p>
         </a>

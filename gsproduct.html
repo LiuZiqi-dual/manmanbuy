@@ -53,13 +53,11 @@
 
             </div>
             <!-- 各种下拉框 -->
-
             <div class="menu1 select1">
                 <ul>
                     <!-- select1Tmp占位专用 -->
                 </ul>
             </div>
-
             <div class="menu1 select2">
                 <ul>
                     <!-- select2Tmp占位专用 -->
@@ -172,10 +170,10 @@
 
 <script>
     $(function () {
-        $('.list-t ul li:eq(0)').on('click',function () {
+        $('.list-t ul li:eq(0)').on('click focus',function () {
             $('.select1').stop().toggle();
             $('.list-t ul li:eq(0) span').toggleClass('.glyphicon glyphicon-triangle-top');
-            // $(this).siblings().toggle();
+            
         })
         $('.select1').on('click', function () {
             $('.select1').hide();
@@ -207,6 +205,18 @@
         $('.menu-search').on('click', function () {
             $('.menu-search').hide();
         })
+        //点击类select1给li添加委托事件
+        $('.select1').on('click','li',function (e) {
+            // console.log(e.target);
+            shopid = e.target.dataset.id;
+            // console.log(shopid);
+            detail();
+        })
+        $('.select2').on('click','li',function (e) {
+            areaid = e.target.dataset.id;
+            // console.log(areaid);
+            detail();
+        })
     })
 </script>
 <!-- 凑单品店铺信息 -->
@@ -214,7 +224,7 @@
 
     {{ each data value index }}
     <li class="line-b">
-        <a href="javascript:;" style="text-decoration:none">{{value.shopName}}</a>
+        <a href="javascript:;" data-id={{value.shopId}} style="text-decoration:none">{{value.shopName}}</a>
     </li>
     {{ /each }}
 </script>
@@ -224,7 +234,7 @@
 
     {{ each data value index }}
     <li class="line-b">
-        <a href="javascript:;" style="text-decoration:none">{{value.areaName}}</a>
+        <a href="javascript:;" data-id={{value.areaId}} style="text-decoration:none">{{value.areaName}}</a>
     </li>
     {{ /each }}
 </script>
