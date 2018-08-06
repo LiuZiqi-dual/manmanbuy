@@ -24,9 +24,6 @@ $.ajax({
                         console.log(data.result);
                         // console.log(titleid-1+2);
                         // var listNum = $('.panel-body:nth-child('+(titleid-1+2)+')');
-                        // listNum.append(template('category_detail_template',{
-                        //     data:data.result
-                        // }));
                         $('.panel-body').html(template('category_detail_template', {
                             data: data.result
                         }));
