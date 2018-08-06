@@ -1,3 +1,17 @@
 body {
-
+    .menutree{
+        height: 40px;
+        background-image: linear-gradient(#fff,#f4f4f4);
+        padding: 4px 10px;
+        .screen{
+            height: 100%;
+            width: 60px;
+            background-color: #0094ff;
+            
+        }
+    }
+    .container{
+        height: 1000px;
+        background-image: linear-gradient(#FF90AD,#FF003E);
+    }
 }
