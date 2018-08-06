@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>慢慢买比价网——放心购物，我们绝不外链到拼多多</title>
   <link rel="shortcut icon" href="./favicon.ico">
-  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+  <!-- <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css"> -->
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/public.css">
@@ -31,9 +31,6 @@
     </div>
   </nav>
   <!-- 导航栏部分结束 -->
-
-
-
   <!-- 搜索框部分开始 -->
   <div class="search">
     <div class="search_box">
@@ -43,9 +40,21 @@
   </div>
   <!-- 搜索框部分结束 -->
 
-  <!-- 三级菜单部分开始 -->
-  <div class="menutree">
-    <div class="menu clearfix"></div>
+  <!-- 三级菜单部分开始 （模板）-->
+  <div class="menutree clearfix">
+    <div class="menu fl">
+      <span>
+        <a href="javascript:;">首页</a>&gt;
+      </span>
+      <span>
+        <a href="javascript:;">全部分类</a>&gt;
+      </span>
+      <span>
+        <a href="javascript:;">
+          模板
+        </a>&gt;
+      </span>
+    </div>
     <!-- 毫无作用的按钮，可改 -->
     <div class="screen fr">
       <a href="javascript:;">
@@ -54,7 +63,24 @@
     </div>
   </div>
   <!-- 三级菜单部分结束 -->
-  <div class="container"></div>
+  <!-- 商品列表部分开始 （模板）-->
+  <div class="container clearfix">
+    <ul>
+      <li>
+        <div class="productImg fl"></div>
+        <div class="productData">
+          <p class="productName">模板替换</p> 
+          <h5 class="productPrice">模板替换</h5>
+          <div class="comment">
+            <span class="productQuote">模板替换</span>
+            <span class="productCom fr">模板替换</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- 商品列表部分结束 -->
+  
   <!-- 底部固定部分开始 -->
   <div class="market">
     <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap">
@@ -92,11 +118,27 @@
   <!-- footer部分结束 -->
 </body>
 <script src="./js/jquery-1.12.2.js"></script>
-<script src="./lib/bootstrap/js/bootstrap.js"></script>
+<!-- <script src="./lib/bootstrap/js/bootstrap.js"></script> -->
 <script src="./js/template-web.js"></script>
 <script src="./js/public.js"></script>
 <script src="./lib/tap-swpie.js"></script>
 <script src="./js/productlist.js"></script>
 <!-- 三级菜单模板 -->
+<script type="text/template" id="">
+  {{each res val key}}
+  <li>
+    <div class="productImg fl"></div>
+    <div class="productData">
+      <p class="productName">模板替换</p> 
+      <h5 class="productPrice">模板替换</h5>
+      <div class="comment">
+        <span class="productQuote">模板替换</span>
+        <span class="productCom fr">模板替换</span>
+      </div>
+    </div>
+  </li>
+  {{/each}}
+</script>
+
 
 </html>

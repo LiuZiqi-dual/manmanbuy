@@ -36,6 +36,12 @@ $.ajax({
 
     }
 })
+
+$('.panel-group .panel-body').on('click', function () {
+    console.log(123);
+
+    // window.location
+});;
 // .category_container ul li:nth-child('+(titleid-1))
 
 
