@@ -40,7 +40,6 @@
         <div class="gm">
             <a href="javascript:;">确认购买</a>
         </div>
-
         <!-- 购买按钮结束 -->
     <!-- footer部分开始 -->
     <footer>
@@ -67,31 +66,7 @@
 </body>
 <script src="js/jquery-1.12.2.js"></script>
 <script src="js/template-web.js"></script>
-<script>
-    // get接受api
-    $(function () {
-        // 获取url选择的参数即后面productid=2，获取2，参数写productid就可以获取，利用沙盒，以防命名重复
-        (function ($) {
-            $.getUrlParam = function (name) {
-                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-                var r = window.location.search.substr(1).match(reg);
-                if (r != null) return unescape(r[2]);
-                return null;
-            }
-        })(jQuery);
-        // 获取id值，调用函数值为要被调取的参数
-        var id = $.getUrlParam('productid');
-        // console.log(id);
-        // 接收api
-        $.get("http://193.112.55.79:9090/api/getdiscountproduct?productid=" + id + "", function (res) {
-            // 设置模板
-            var data = template("temp", res);
-            // // 把模板追加到盒子去
-            $(".getdiscountproduct").html(data);
-            // console.log(res);
-        }, "json")
-    })
-</script>
+<script src="js/getdiscountproduct.js"></script>
 </html>
 <script type="text/template" id="temp">
     {{each result value }}
@@ -110,6 +85,7 @@
         <p>{{value.productInfo}}</p>
         <%- value.productImg %>
     </div>
+    <img src="images/mmbweixin2.png" alt="">
     <!-- 评论，因没有城市库存，从而将评论与商品详情放在一起 -->
     <div class="pl">
             <%- value.productComment %>

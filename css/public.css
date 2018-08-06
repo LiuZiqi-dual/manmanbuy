@@ -147,7 +147,7 @@ body footer .foot_func {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid #C4C4C4;
+  outline: 1px solid #C4C4C4;
 }
 
 body footer .foot_func a {
