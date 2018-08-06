@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/couponproduct.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+</head>
+
+<body>
+    <!-- 头部标题 -->
+    <header id="backTop">
+        <a href="javascript:;" class="a_icon">
+            <i class="iconfont">&#xe697;</i>
+        </a>
+        <h2>肯德基优惠券</h2>
+        <a href="javascript:;" class="icon-app"></a>
+    </header>
+    <div class="tit">--点餐前出示手机中的优惠券，即可享受优惠--</div>
+    <!-- 优惠券内容部分开始 -->
+    <div class="view">
+        <ul>
+            <!-- 优惠券列表内容占位专用 -->
+
+        </ul>
+    </div>
+
+</body>
+<script src="lib/jquery.js"></script>
+<script src="art-template/template-web.js"></script>
+<script src="art-template/template-web.js"></script>
+<script src="js/getcouponproduct.js"></script>
+<script type="text/template" id="getcouponproductTmp">
+    {{each data value}}
+    <li>
+        {{@ value.couponProductImg}}
+        <div class="detail">
+            <a href="javascript:;">{{value.couponProductName}}</a>
+            <p>{{value.couponProductPrice}}</p>
+            <span>&gt;</span>
+        </div>
+
+        <div class="date">{{value.couponProductTime}}</div>
+    </li>
+    {{/each}}
+</script>
+
+</html>

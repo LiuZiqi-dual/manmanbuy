@@ -1,0 +1,98 @@
+header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: #f4483e;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+header .a_icon {
+    width: 50px;
+    text-align: center;
+}
+
+header .a_icon i {
+    font-size: 35px;
+    color: #fff;
+    line-height: 44px;
+}
+
+header h2 {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    color: #fff;
+    text-align: center;
+    line-height: 44px;
+    font-size: 20px;
+}
+
+header .icon-app {
+    width: 50px;
+    background: url("https://img.alicdn.com/imgextra/i2/690311/TB2beKvaTXYBeNkHFrdXXciuVXa_!!690311.png");
+    background-size: 43px 35px;
+    background-origin: content-box;
+    background-clip: content-box;
+    padding: 5px;
+}
+
+.tit {
+    text-align: center;
+    margin: 10px 0;
+}
+
+//   优惠券内容部分开始
+.view {
+    ul {
+        li {
+            border-bottom: 1px solid #ddd;
+            position: relative;
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            height: 250px;
+            img {
+                flex: 1;
+                max-width: 40%;
+                padding: 12px 12px 0 12px;
+            }
+            .detail {
+                flex: 1;
+                width: 60%;
+                
+                a {
+                    display: block;
+                    padding: 14px 0;
+                    color: #000;
+                    font-size: 16px;
+                    line-height: 24px;
+                    padding-right: 12px;
+                    margin-top: 12px;
+                }
+                p {
+                    color: #000;
+                    font-weight: 700;
+                    font-size: 16px;
+                }
+                span {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    font-size: 28px;
+                    margin-top: -28px;
+                }
+            }
+            .date {
+                width: 100%;
+                color: rgb(255, 153, 0);
+                padding: 15px 0;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                font-size: 16px;
+            }
+        }
+    }
+}

@@ -1,0 +1,381 @@
+header {
+  height: 44px;
+  background-color: #ff8b00;
+  -webkit-box-shadow: 0px 2px 3px #dddddd;
+          box-shadow: 0px 2px 3px #dddddd;
+}
+
+header .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 44px;
+  padding: 0 8px;
+  position: relative;
+}
+
+header .inner .left a {
+  line-height: 44px;
+  color: #fff;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+header .inner .center {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+header .inner .center h1 {
+  margin: 0;
+  padding: 0;
+  line-height: 44px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.list .list-t {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.list .list-t ul {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+.list .list-t ul .menu0 {
+  width: 33%;
+  float: left;
+  text-align: center;
+  height: 37px;
+  position: relative;
+}
+
+.list .list-t ul .menu0 a {
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  line-height: 37px;
+  color: #666;
+}
+
+.list .list-t ul .menu0 a span {
+  padding: 0 6px;
+  font-size: 12px;
+}
+
+.list .list-t .search {
+  width: 47px;
+  height: 37px;
+  border-left: 1px solid #ddd;
+}
+
+.list .list-t .search a {
+  display: inline-block;
+  font-size: 20px;
+  width: 47px;
+  height: 37px;
+  line-height: 37px;
+  text-align: center;
+  color: #666;
+}
+
+.list .list-b {
+  background-color: #f1f1f1;
+}
+
+.menu1 {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  z-index: 100;
+  background-color: #fff;
+}
+
+.menu1 a {
+  display: block;
+  font-size: 16px;
+  color: #666;
+  padding: 0 10px;
+  line-height: 40px;
+  height: 40px;
+}
+
+.line-b {
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-search {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  height: 270px;
+  width: 100%;
+  padding: 0 12px;
+  background-color: #f7f7f7;
+  display: none;
+}
+
+.menu-search .menu-search-c {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-search .menu-search-c .txt {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  height: 37px;
+  margin-top: 12px;
+}
+
+.menu-search .menu-search-c .txt span {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+}
+
+.menu-search .menu-search-c .txt input {
+  height: 37px;
+  line-height: 37px;
+  outline: none;
+  padding-left: 30px;
+  border: none;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+.menu-search .menu-search-c .search-r {
+  width: 40px;
+  height: 37px;
+  font-size: 16px;
+  line-height: 37px;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.menu-search .menu-search-c .search-r .sousuo {
+  display: block;
+  width: 100%;
+  line-height: 30px;
+  border: none;
+}
+
+.menu-search .menu-search-c .search-r .sousuo:hover {
+  text-decoration: none;
+}
+
+.paixu {
+  position: absolute;
+  top: 68px;
+  left: 12px;
+  width: 100%;
+}
+
+.fenlei {
+  position: absolute;
+  top: 150px;
+  left: 12px;
+  width: 100%;
+}
+
+.menu-search a {
+  display: inline-block;
+  width: 23%;
+  text-align: center;
+  line-height: 30px;
+  color: #666;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin: 3px 1px;
+}
+
+.menu-search a:hover {
+  color: #fff;
+  background-color: #ff9501;
+}
+
+.menu-search P {
+  padding: 0 4px;
+}
+
+.list-b ul li {
+  width: 50%;
+  float: left;
+}
+
+.list-b ul li a {
+  display: block;
+  margin: 4px;
+  background-color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-b ul li a .pic {
+  text-align: center;
+}
+
+.list-b ul li a .pic img {
+  max-width: 100%;
+}
+
+.list-b ul li a p {
+  margin: 0;
+  padding-left: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333;
+}
+
+.list-b ul li a .other .price {
+  float: left;
+  font-size: 20px;
+  color: orangered;
+}
+
+.other button {
+  float: right;
+  width: 60px;
+  text-align: center;
+  height: 25px;
+  background-color: #ff9501;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  line-height: 25px;
+}
+
+body .market {
+  position: fixed;
+  right: 2px;
+  bottom: 60px;
+  z-index: 1;
+}
+
+body .market a img {
+  width: 64px;
+}
+
+body .back_top_btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  position: fixed;
+  z-index: 1;
+  right: -80px;
+  bottom: 15px;
+  background-color: #fff;
+}
+
+body .back_top_btn a {
+  width: 100%;
+  height: 100%;
+  line-height: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  font-size: 18px;
+  color: #999;
+}
+
+body .back_top_btn a .icon_back_top {
+  font-family: "iconfont" !important;
+  line-height: 0;
+  font-size: 23px;
+  font-style: bold;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body footer {
+  background-color: #EFEFEF;
+  overflow: hidden;
+}
+
+body footer .foot_func {
+  margin-top: 10px;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #C4C4C4;
+}
+
+body footer .foot_func a {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+body footer .foot_func .login {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+body footer .foot_func .signin {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border-left: 1px solid #C4C4C4;
+  border-right: 1px solid #C4C4C4;
+}
+
+body footer .foot_func .back_top {
+  -webkit-box-flex: 1.5;
+  -ms-flex: 1.5;
+  flex: 1.5;
+}
+
+body footer .foot_func .back_top a .icon_back_top {
+  font-family: "iconfont" !important;
+  font-size: 14px;
+  font-style: bold;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body footer .copyright {
+  text-align: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+body footer .copyright p a {
+  font-size: 12px;
+  color: #FF0000;
+}
+/*# sourceMappingURL=together.css.map */
