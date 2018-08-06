@@ -1,0 +1,99 @@
+header {
+  height: 45px;
+  background-color: #ff841d;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header span {
+  width: 50px;
+  height: 45px;
+  font-size: 30px !important;
+  font-weight: 600;
+  text-align: center;
+  line-height: 45px;
+}
+
+header h2 {
+  font-size: 20px;
+}
+
+header a {
+  width: 50px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+}
+
+header a img {
+  width: 70%;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+nav ul li {
+  width: 27%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0;
+}
+
+nav ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 0px 1px 3px 1px #666;
+          box-shadow: 0px 1px 3px 1px #666;
+  width: 100%;
+  padding: 10px 0;
+}
+
+nav ul li a div {
+  width: 20px;
+  margin-bottom: 5px;
+}
+
+nav ul li a div img {
+  width: 100%;
+}
+
+nav ul li a span {
+  text-align: center;
+}
+/*# sourceMappingURL=marketnav.css.map */

@@ -1,0 +1,127 @@
+@charset "UTF-8";
+body {
+  border: 1px solid #d0c7c7;
+}
+
+.view .head {
+  padding: 10px 5%;
+  background: #efefef;
+}
+
+.view .head a {
+  color: #5a5757;
+  font-size: 14px;
+}
+
+.view .banner {
+  padding: 0 20px;
+  position: relative;
+}
+
+.view .banner::before {
+  content: '收藏';
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  position: absolute;
+  background: #8bca00;
+  color: #fff;
+  border-radius: 50%;
+  right: 20px;
+  bottom: 10px;
+}
+
+.view .banner .title {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.view .banner img {
+  margin: 0 auto;
+  display: block;
+}
+
+.view .buy_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.view .buy_link a {
+  padding: 8px 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #fff;
+  background: #ffbf13;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #d3772c;
+}
+
+.view .buy_link a:nth-child(1) {
+  background: #ff9a19;
+}
+
+.view table {
+  padding: 5px 5px;
+  border-bottom: 1px solid #bfbcbc;
+}
+
+.view table tbody tr:nth-child(1) td:nth-child(1) {
+  vertical-align: baseline;
+}
+
+.view table tbody tr:nth-child(1) td:nth-child(2) a {
+  padding-right: 25%;
+  color: #000;
+  width: 100%;
+  display: block;
+}
+
+.view table tbody tr:nth-child(1) td:nth-child(3) {
+  color: #db697a;
+}
+
+.view .tips_content {
+  padding: 10px 10px;
+}
+
+.Net_firend_box .Net_firend_title {
+  font-size: 16px;
+  padding: 8px 0;
+  color: #423c3c;
+  text-align: center;
+  background: #dbdbdb;
+}
+
+.Net_firend_box .Net_firend_from {
+  padding-top: 10px;
+}
+
+.Net_firend_box .Net_firend_time {
+  padding-top: 5px;
+}
+
+.Net_firend_box .Net_firend {
+  padding: 0 12px;
+}
+
+.Net_firend_box .Net_firend .Net_firend_content {
+  color: #605f5f;
+  font-size: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid #888;
+  margin-bottom: 5px;
+}
+
+.gengduo {
+  margin: 15px 5px;
+  padding: 10px 0;
+  text-align: center;
+  background: #e5e5e5;
+  border-radius: 15px;
+  color: #000;
+}
+/*# sourceMappingURL=getproductID.css.map */
