@@ -23,6 +23,7 @@ i,
 button{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 p{
     -webkit-margin-before: 0em;
@@ -56,13 +57,14 @@ button {
 }
 /*取消链接的下划线*/
 a {
-    color: #666;
+    color: #5A5A5A;
     text-decoration: none;
+    font-size: 14px;
 }
 
-a:hover {
+/* a:hover {
     color: #e33333;
-}
+} */
 
 button,
 input {
@@ -131,7 +133,29 @@ body {
     url('../fonts/iconfont.ttf') format('truetype'),
     url('../fonts/iconfont.svg#iconfont') format('svg');
 }
-.col-red{
-    color: #C81623;
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @font-face {
+    font-family: 'iconfont2';
+    src: url('../fonts2/iconfont.eot');
+    src: url('../fonts2/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts2/iconfont.woff') format('woff'),
+    url('../fonts2/iconfont.ttf') format('truetype'),
+    url('../fonts2/iconfont.svg#iconfont') format('svg');
+}
+.iconfont2{
+    font-family:"iconfont2" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+  }
+.col-orange{
+    color: #FF841D;
 }
 
