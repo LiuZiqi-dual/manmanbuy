@@ -10,7 +10,9 @@
 //  var name = location.search.substr(7);   //带回去的页码数
  var nameId =  $.getUrlParam('fenye');
 nameId =  nameId - 1 +1;
-
+//获取位置
+var pageY =    $.getUrlParam('scrollTop');
+pageY = pageY -1 + 1;
 
  //渲染的一个数据
     // 获取id值，调用函数值为要被调取的参数 
@@ -39,7 +41,7 @@ productid  = productid - 1 +1;
  }
  
  $('#backTop a').on('click',function(){
-     location.href = "./moneyctrl.html?nameId="+nameId;
+     location.href = "./moneyctrl.html?nameId="+nameId+"&pageY="+pageY;
  })
 
 

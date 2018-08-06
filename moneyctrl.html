@@ -96,11 +96,11 @@
 <script src="./art-template/template-web.js"></script>
 <script src="./js/public.js"></script>
 <script src="js/moneyctrl.js"></script>
-<!-- 数据模板 -->
+<!-- 数据模板 ./getmoneyID.html-->
 <script type="text/template" id="template">
     {{each data val key}}
     <li>
-        <a href="./getmoneyID.html?fenye={{val.name}}&productid={{val.productId}}" class="clearfix">
+        <a href="./getmoneyID.html?scrollTop={{val.scrollTop}}&fenye={{val.name}}&productid={{val.productId}}" class="clearfix getScrollTop">
             <div class="banner_img">
                 {{@val.productImgSm}}
             </div>
