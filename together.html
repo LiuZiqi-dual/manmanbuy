@@ -116,12 +116,14 @@
                     <a href="javascript:;" style="text-decoration: none;">服饰</a>
                 </div>
             </div>
+
+
         </div>
 
         <div class="list-b clearfix">
             <ul>
-                    <!-- 凑单品商品列表占位专用 -->
-                
+                <!-- 凑单品商品列表占位专用 -->
+
 
             </ul>
         </div>
@@ -169,7 +171,43 @@
 <script src="js/getTogetherList.js"></script>
 
 <script>
-   
+    $(function () {
+        $('.list-t ul li:eq(0)').on('click',function () {
+            $('.select1').stop().toggle();
+            $('.list-t ul li:eq(0) span').toggleClass('.glyphicon glyphicon-triangle-top');
+            // $(this).siblings().toggle();
+        })
+        $('.select1').on('click', function () {
+            $('.select1').hide();
+            $('.list-t ul li:eq(0) span').removeClass('.glyphicon glyphicon-triangle-top').addClass(
+                '.glyphicon glyphicon-triangle-bottom');
+
+        })
+        $('.list-t ul li:eq(1)').on('click', function () {
+            $('.select2').stop().toggle();
+            $('.list-t ul li:eq(1) span').toggleClass('.glyphicon glyphicon-triangle-top');
+        })
+        $('.select2').on('click', function () {
+            $('.select2').hide();
+            $('.list-t ul li:eq(1) span').removeClass('.glyphicon glyphicon-triangle-top').addClass(
+                '.glyphicon glyphicon-triangle-bottom');
+        })
+        $('.list-t ul li:eq(2)').on('click', function () {
+            $('.select3').stop().toggle();
+            $('.list-t ul li:eq(2) span').toggleClass('.glyphicon glyphicon-triangle-top');
+        })
+        $('.select3').on('click', function () {
+            $('.select3').hide();
+            $('.list-t ul li:eq(2) span').removeClass('.glyphicon glyphicon-triangle-top').addClass(
+                '.glyphicon glyphicon-triangle-bottom');
+        })
+        $('.search').on('click', function () {
+            $('.menu-search').stop().toggle();
+        })
+        $('.menu-search').on('click', function () {
+            $('.menu-search').hide();
+        })
+    })
 </script>
 <!-- 凑单品店铺信息 -->
 <script type="text/template" id="select1Tmp">
@@ -195,21 +233,21 @@
 
     {{ each data value }}
     <li>
-            <a href="javascript:;">
-                <div class="pic">
-                    <img src="{{value.productImg}}" alt="">
-                </div>
-                <p>{{value.productName}}</p>
-                <div class="other">
-                    <div class="price">
-                        <i style='font-size:20px'>{{ value.productPrice }}</i>
-                        
-                    </div>
-                    <button>去凑单</button>
+        <a href="javascript:;">
+            <div class="pic">
+                <img src="{{value.productImg}}" alt="">
+            </div>
+            <p>{{value.productName}}</p>
+            <div class="other">
+                <div class="price">
+                    <i style='font-size:20px'>{{ value.productPrice }}</i>
 
                 </div>
-            </a>
-        </li>
+                <button>去凑单</button>
+
+            </div>
+        </a>
+    </li>
     {{ /each }}
 </script>
 
