@@ -4,6 +4,7 @@ var locaId = arr[1];
 var rackul = document.querySelector('.rack ul');
 var allbrands = document.querySelector('.allbrands');
 var comment = document.querySelector('.comment');
+var backtop = document.querySelector('.backup');
 
 
 //获取评论图片
@@ -11,6 +12,17 @@ var commentimgs = document.querySelector('.commentimgs');
 var commenttitle = document.querySelector('.commenttitle');
 var commentfoot = document.querySelector('.commentfoot');
 // 先获取当前ID的类型
+
+
+// 调用layer的加载部分
+var index = layer.msg('加载中',{
+    time: 10*1000,
+    shade:0.5,
+    shadeClose:false,
+    offset: 'auto',
+    area: '150px'
+}); 
+
 $.ajax({
     url:'http://193.112.55.79:9090/api/getbrandtitle',
     type:'get',
@@ -45,6 +57,7 @@ $.ajax({
         // console.log(arr);
         var htmlStr = template('racktmp',{data:arr});
         rackul.innerHTML = htmlStr;
+        layer.close(index);
     }
 })
 
@@ -66,7 +79,7 @@ $.ajax({
         var htmlStr = template('allbrands',{data:arr});
         allbrands.innerHTML = htmlStr;
 
-        console.log(productid);
+        // console.log(productid);
         //在后面获取
         //商品评论
         $.ajax({
@@ -75,6 +88,7 @@ $.ajax({
     dataType:'json',
     data:{'productid':productid},
     success:function(res){
+        
         var arr = res.result;
         var htmlStr = template('talkcomment',{data:arr});
         // console.log(htmlStr);
@@ -91,7 +105,7 @@ $.ajax({
 changesize();
 function changesize(){
     var htmlsize = 100;
-    var htmlwidth = 1400;
+    var htmlwidth = 1200;
     var newwidth = document.querySelector('html').offsetWidth;
     var newsize = newwidth*htmlsize/htmlwidth;
     document.querySelector('html').style.fontSize = newsize+'px';
@@ -101,3 +115,11 @@ function changesize(){
 window.onresize = function(){
     changesize();
 }
+
+
+//返回顶部
+backtop.addEventListener('click',function(){
+    // console.log(document.documentElement.scrollTop);
+    document.documentElement.scrollTop = 0;
+    // $(window).scrollTop(0);
+})

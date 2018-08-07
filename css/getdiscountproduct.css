@@ -1,6 +1,11 @@
+#backTop {
+  padding-left: 0;
+}
+
 #backTop .logo {
   width: 20%;
   padding-top: 25px;
+  padding-left: 12px;
   color: #fff;
 }
 
@@ -17,7 +22,8 @@
 #backTop p {
   display: block;
   float: left;
-  width: 200px;
+  margin-left: 50px;
+  width: 100px;
   height: 50px;
   color: #fff;
   text-align: center;
@@ -60,13 +66,21 @@
 }
 
 .getdiscountproduct .content {
-  height: 300px;
+  width: 70%;
 }
 
 .getdiscountproduct .content p {
   font-size: 16px;
-  width: 70%;
   margin-bottom: 10px;
+}
+
+.getdiscountproduct .content div {
+  height: 210px;
+}
+
+.getdiscountproduct .content div img {
+  display: block;
+  height: 100%;
 }
 
 .getdiscountproduct > img {

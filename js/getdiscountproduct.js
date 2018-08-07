@@ -20,7 +20,7 @@ $(function () {
         $(".getdiscountproduct").html(data);
     }, "json");
     $(".logo").on("click",function(){
-        // window.
-        location.href="inlanddiscount.html"
+        // 点击返回携带id，然后返回页面可以根据id，判断是不是返回页面
+        location.href="inlanddiscount.html?id=2";
     })
 })

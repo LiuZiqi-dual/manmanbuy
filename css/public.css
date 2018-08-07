@@ -12,7 +12,8 @@ body {
 
 body nav {
   height: 50px;
-  background-color: #FF841D;
+  background: -webkit-gradient(linear, right bottom, left top, from(#f34c8c), color-stop(#fa024d), to(#c042d4));
+  background: linear-gradient(to left top, #f34c8c, #fa024d, #c042d4);
   padding-left: 12px;
   padding-right: 4px;
 }
@@ -57,7 +58,7 @@ body .search .search_box {
   height: 30px;
   background-color: #F1F1F1;
   border-radius: 15px;
-  padding-right: 64px;
+  padding-left: 66px;
 }
 
 body .search .search_box input {
@@ -65,7 +66,6 @@ body .search .search_box input {
   height: 100%;
   background-color: transparent;
   border: 0px solid transparent;
-  padding-left: 20px;
   font-size: 16px;
   outline: none;
 }
@@ -73,7 +73,7 @@ body .search .search_box input {
 body .search .search_box button {
   position: absolute;
   top: 0px;
-  right: 0px;
+  left: 0px;
   width: 64px;
   height: 30px;
   line-height: 100%;

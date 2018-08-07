@@ -62,7 +62,6 @@ productid  = productid - 1 +1;
  var a = document.querySelector('#backTop a');
    itcast(a).tap(function(){
     location.href = "./moneyctrl.html?nameId="+nameId+"&pageY="+pageY;
-    
    })
      
 

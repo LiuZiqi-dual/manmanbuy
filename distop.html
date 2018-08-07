@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./fonts/iconfont.css">
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/distop.css">
+  <link rel="stylesheet" href="./lib/plugins/layer/mobile/need/layer.css">
   <meta name="description" content="慢慢买比价网-专业的综合网上比价商城,数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!" />
   <meta name="Keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,慢慢买比价网" />
 </head>
@@ -32,6 +33,8 @@
     </div>
   </nav>
   <!-- 导航栏部分结束 -->
+
+  
   <!-- 固定下载连接部分开始 -->
   <div class="market">
     <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap">
@@ -47,9 +50,9 @@
     </div>
 
     <div class="crumbs">
-        <a href="#">首页</a>&gt;
-        <a href="#">品牌大全</a>&gt;
-        <a href="#" class="listname"></a>
+        <a href="./index.html">首页</a>&gt;
+        <a href="./brandTitle.html">品牌大全</a>&gt;
+        <a href="./distop.html" class="listname"></a>
     </div>
    
     <!-- 品牌排行榜 -->
@@ -89,8 +92,8 @@
       <div class="signin">
         <a href="register.html">注册</a>
       </div>
-      <div class="back_top">
-        <a href="#backTop">
+      <div class="back_top backup">
+        <a href="javascript:;">
           <i class="icon_back_top">&#xe6a5;</i>返回顶部
         </a>
       </div>
@@ -103,7 +106,8 @@
   <!-- footer部分结束 -->
 </body>
 <script src="./js/jquery-1.12.2.js"></script>
-<script src="./bil/art-template/template-web.js"></script>
+<script src="./lib/plugins/layer/layer.js"></script>
+<script src="./art-template/template-web.js"></script>
 <script src="./js/distop.js"></script>
 
 <!-- 十大品牌模板 -->
@@ -125,7 +129,7 @@
 <!-- 页面模板 -->
 <script type="text/template" id="allbrands">
   {{each data value index}}
-    <a class="detaillist clearfix" href="#?id={{value.productId}}">
+    <a class="detaillist clearfix" href="getproductID.html?productId={{value.productId}}&categoryid={{value.categoryId}}">
       <div class="listleft clearfix">
         <div class="productimg">
           {{@value.productImg}}

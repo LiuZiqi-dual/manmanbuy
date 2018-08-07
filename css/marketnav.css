@@ -37,7 +37,11 @@ header a img {
   width: 70%;
 }
 
-nav ul {
+.navlis {
+  background-color: #efefef;
+}
+
+.navlis ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,7 +51,12 @@ nav ul {
       flex-wrap: wrap;
 }
 
-nav ul li {
+.navlis ul li {
+  -webkit-transition: opacity 2s , -webkit-transform 1s;
+  transition: opacity 2s , -webkit-transform 1s;
+  transition: transform 1s , opacity 2s;
+  transition: transform 1s , opacity 2s , -webkit-transform 1s;
+  background-color: #fff;
   width: 27%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -64,7 +73,7 @@ nav ul li {
   margin: 10px 0;
 }
 
-nav ul li a {
+.navlis ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,16 +93,32 @@ nav ul li a {
   padding: 10px 0;
 }
 
-nav ul li a div {
+.navlis ul li a div {
   width: 20px;
   margin-bottom: 5px;
 }
 
-nav ul li a div img {
+.navlis ul li a div img {
   width: 100%;
 }
 
-nav ul li a span {
+.navlis ul li a span {
   text-align: center;
+}
+
+.mulone {
+  -webkit-transform: translateX(-500px) rotateY(360deg);
+          transform: translateX(-500px) rotateY(360deg);
+  opacity: 0;
+}
+
+.multhree {
+  -webkit-transform: translateX(500px) rotateY(-360deg);
+          transform: translateX(500px) rotateY(-360deg);
+  opacity: 0;
+}
+
+.multwo {
+  opacity: 0;
 }
 /*# sourceMappingURL=marketnav.css.map */

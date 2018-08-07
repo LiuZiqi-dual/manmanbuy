@@ -167,14 +167,25 @@ $color :rgb(255, 132, 29);
     }
     .comment_bottom{
         position: relative;
-        &:before{
+        &:after{
             content: '';
             width: 0;
             height: 0;
             position: absolute;
-            top: -8px;
+            top: -7px;
             left: 36px;
-            border-bottom: 8px solid rgb(248, 248, 248);
+            border-bottom: 10px solid rgb(248, 248, 248);
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+        }
+        &:before {
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: -8px; 
+            left: 36px;
+            border-bottom: 8px solid #ccc;
             border-left: 7px solid transparent;
             border-right: 7px solid transparent;
         }
