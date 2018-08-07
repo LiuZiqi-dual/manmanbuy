@@ -24,7 +24,11 @@ var button = $(".search_box button")[0];
 //有的页面没有button  需要判断一下
 if (button) {
     button.addEventListener('touchmove', function (e) {
-        //清楚定时器
+        touchmove(e)
+       
+    })
+      //清楚定时器
+      function touchmove(e){
         clearInterval(timer);
         var maxWidth = $(".search_box input")[0].offsetWidth;
         $(".search_box input").attr("placeholder", '');
@@ -32,12 +36,17 @@ if (button) {
         if (e.changedTouches[0].clientX <= 30) {
             //在原点的时候
             $(".search_box button").css('fontSize', '16px')
-            button.style.marginLeft = 0;
+            button.style.left = 0;
             $(".search_box")[0].style.paddingLeft = 66 + 'px';
             $(".search_box button").text('搜索');
             $(".search_box input").val('');
             timer = setInterval(function () {
                 $(".search_box input").attr("placeholder", ' >>>向右滑动有惊喜哦').fadeOut(500).fadeIn(500);
+                //搜索框有内容 ，清楚定时器
+                if ($(".search_box input").val() != '') {
+                    //清楚定时器
+                    clearInterval(timer);
+                }
             }, 1000);
             //===================================
         } else if (e.changedTouches[0].clientX >= maxWidth + 40) {
@@ -56,8 +65,50 @@ if (button) {
             }, 500)
             //=====================================
         } else {
-            button.style.marginLeft = (e.changedTouches[0].clientX - 32) + 'px';
+            button.style.left = (e.changedTouches[0].clientX - 32) + 'px';
         }
+    }
+    //===========================
+    button.addEventListener('touchend', function (e) {
+        var maxWidth = $(".search_box input")[0].offsetWidth/2;
+          if(parseInt(button.style.left) > maxWidth){
+            button.style.left = $(".search_box input")[0].offsetWidth+'px';      
+            //=======
+             //到最后的时候
+             $(".search_box")[0].style.paddingLeft = 0;
+             $(".search_box")[0].style.paddingRight = 66 + 'px';
+             $(".search_box button").text('不要点我');
+             $(".search_box button").css('fontSize', '12px')
+             timer = setInterval(function () {
+                 $(".search_box input").attr("placeholder", '  千万别点右边按钮啊!求你了').fadeOut(500).fadeIn(500);
+                 button.style.left = $(".search_box input")[0].offsetWidth+'px';    
+                 //搜索框有内容 ，清楚定时器
+                 if ($(".search_box input").val() != '') {
+                     //清楚定时器
+                     clearInterval(timer);
+                 }
+             }, 500) 
+          }else{
+            button.style.left = 0+'px'; 
+            //======
+             //在原点的时候
+             $(".search_box button").css('fontSize', '16px')
+             $(".search_box")[0].style.paddingLeft = 66 + 'px';
+             $(".search_box button").text('搜索');
+             $(".search_box input").val('');
+             timer = setInterval(function () {
+                 $(".search_box input").attr("placeholder", ' >>>向右滑动有惊喜哦').fadeOut(500).fadeIn(500);
+                 //搜索框有内容 ，清楚定时器
+                 if ($(".search_box input").val() != '') {
+                     //清楚定时器
+                     clearInterval(timer);
+                 }
+             }, 1000);
+
+          }
+          
+          
+        
     })
 }
 
