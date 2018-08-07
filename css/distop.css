@@ -194,6 +194,18 @@
   background-color: #f8f8f8;
 }
 
+.allcomment .comment_bottom:after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -7px;
+  left: 36px;
+  border-bottom: 10px solid #f8f8f8;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+
 .allcomment .comment_bottom:before {
   content: '';
   width: 0;
@@ -201,7 +213,7 @@
   position: absolute;
   top: -8px;
   left: 36px;
-  border-bottom: 8px solid #f8f8f8;
+  border-bottom: 8px solid #ccc;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
 }
