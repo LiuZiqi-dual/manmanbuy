@@ -57,7 +57,7 @@ body .search .search_box {
   height: 30px;
   background-color: #F1F1F1;
   border-radius: 15px;
-  padding-right: 64px;
+  padding-left: 45px;
 }
 
 body .search .search_box input {
@@ -73,7 +73,7 @@ body .search .search_box input {
 body .search .search_box button {
   position: absolute;
   top: 0px;
-  right: 0px;
+  left: 0px;
   width: 64px;
   height: 30px;
   line-height: 100%;
