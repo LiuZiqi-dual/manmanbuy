@@ -47,6 +47,7 @@ header .icon-app {
 .view {
     ul {
         li {
+            
             border-bottom: 1px solid #ddd;
             position: relative;
             display: flex;
@@ -54,8 +55,10 @@ header .icon-app {
             flex-wrap: wrap;
             height: 250px;
             img {
+                z-index: -19891014;
                 flex: 1;
-                max-width: 40%;
+                max-width: 140px;
+                height: 130px;
                 padding: 12px 12px 0 12px;
             }
             .detail {
@@ -85,14 +88,23 @@ header .icon-app {
                 }
             }
             .date {
+                z-index: -19891014;
                 width: 100%;
                 color: rgb(255, 153, 0);
                 padding: 15px 0;
-                height: 30px;
-                line-height: 30px;
                 text-align: center;
-                font-size: 16px;
+                font-size: 14px;
             }
         }
     }
+}
+// 轮播图部分
+.lunbo{
+    width: 200px;
+    height: 160px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
 }
