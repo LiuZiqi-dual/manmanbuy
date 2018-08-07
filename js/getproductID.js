@@ -15,7 +15,7 @@
  getproductPinglun();
  function getproductId(){
     $.get("http://193.112.55.79:9090/api/getproduct","productid="+productId,function(res){
-         console.log(res.result[0]);
+        //  console.log(res.result[0]);
         //渲染数据 电视广告
         var banner_img = template("banner_img",{data:res.result[0]})
          $(".banner").html(banner_img);
@@ -34,7 +34,7 @@
     $.get("http://193.112.55.79:9090/api/getproductcom","productid="+productId,function(res){      
     var Net_firend_html = template("Net_firend",{data:res.result});
       $(".Net_firend").html(Net_firend_html);
-  console.log(res);
+//   console.log(res);
   
     
     })
