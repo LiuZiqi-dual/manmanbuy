@@ -12,14 +12,12 @@
 var pageid = $.getUrlParam('nameId');
 ajax();
 //接受位置
-var pageY = pageY || 0;
-pageY = $.getUrlParam('pageY');
+ var pageY = $.getUrlParam('pageY');
+ pageY = pageY || 0;
 pageY = pageY - 1 + 1;
 var ress;
-
 function ajax() {
     $.get("http://193.112.55.79:9090/api/getmoneyctrl", 'pageid=' + pageid, function (res) {
-
         var num = [];
         var num2 = [];
         res.totalCount = Math.floor(res.totalCount / 10);
@@ -30,7 +28,6 @@ function ajax() {
         for (var e = 0; e < res.totalCount + 1; e++) {
             num2.push(res.totalCount);
         }
-        console.log(num2);
         
         //点进去传入id  出来的时候返回
         for (var i = 0; i < res.result.length; i++) {
@@ -63,18 +60,20 @@ itcast(next).tap(function () {
     if (pageid == $('#select option').length - 1) {
         layer.msg('已经是最后一页了哦');
         return;
+    }else{
+        pageid ++;
+        ajax();    
     }
-    pageid += 1;
-    ajax();
 })
 itcast(prev).tap(function () {
-    //判断如果等于最后一页  就不再加载
+    //判断如果等于第一页  就不再加载
     if (pageid == 0) {
         layer.msg('这是第一页了哦');
         return;
+    }else{
+        pageid-- ;
+        ajax();
     }
-    pageid -= 1;
-    ajax();
 })
 //下拉菜单获取数据
 $("#select").on('change', function () {

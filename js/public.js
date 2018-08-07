@@ -61,7 +61,7 @@ if (button) {
     })
 }
 
-//设置定时器  获取效果
+//设置定时器  获取初始闪烁效果
 var timer = setInterval(function () {
     $(".search_box input").attr("placeholder", '>>>向右滑动有惊喜哦').fadeOut(500).fadeIn(500);
     //搜索框有内容 ，清楚定时器
