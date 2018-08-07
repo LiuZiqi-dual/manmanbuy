@@ -12,31 +12,30 @@ $(window).on('scroll', function (e) {
 });
 //search
 // if($(".search buton"))
-// var button = $(".search_box button")[0];
+var button = $(".search_box button")[0];
+// var search_box = $(".search_box")[0];
 // var flag;
-// button.touchstart = function(e){
-//     flag=true;
-//     //求出鼠标的相对位置
-//    temp= e.pageY-outer.offsetTop-slider.offsetTop;
-// }
-// document.ontouchend=function(){
-//     flag=false;
-// }
-// document.ontouchmove=function(e){
-//     if(flag){
-//       //求出滚轮对于盒子顶部的距离
-//         var y= e.pageY-outer.offsetTop-temp;
-//         if(y<0)y=0;
-//         var maxY=outer.offsetHeight-slider.offsetHeight-2;
-//         if(y>maxY)y=maxY;
-//         slider.style.top=y+"px";
-//         //-----------------------
-//         //求出内容最大距离  ==  内容高度-容器高度
-//         var neirong=inner.offsetHeight-outer.offsetHeight;
-//         var innerH=y*neirong/maxY;
-//         inner.style.top=-innerH+"px";
-//     }
-// }
-
-
-// console.log($(".search buton").pageY);
+// itcast(button).tap(function(e){
+//     console.log(e.changedTouches[0].clientX);
+    
+// })
+// $(".search div").slideToUnlock()
+button.addEventListener('touchmove',function(e){
+    var maxWidth = $(".search_box input")[0].offsetWidth;
+    $(".search_box input").attr("placeholder",'');
+    if(e.changedTouches[0].clientX<=30){
+          //在原点的时候
+          $(".search_box")[0].style.paddingLeft = 66+'px';
+    $(".search_box input").attr("placeholder",'>>>滑动我有惊喜哦');     
+    }else if(e.changedTouches[0].clientX>=maxWidth+40){
+         //到最后的时候
+        $(".search_box input").attr("placeholder",'搜索您心仪的商品，会有惊喜哦！'); 
+        $(".search_box")[0].style.paddingLeft = 0;
+        $(".search_box")[0].style.paddingRight = 66+'px';
+    }else{
+        button.style.marginLeft = (e.changedTouches[0].clientX-32)+'px';
+    }
+   
+})
+// $(".search_box input").attr("placeholder",'>>>滑动我有惊喜哦'); 
+//     $(".search_box input").attr("placeholder",''); 
