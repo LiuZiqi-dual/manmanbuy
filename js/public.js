@@ -10,16 +10,9 @@ $(window).on('scroll', function (e) {
         $('.back_top_btn').show().css({right:'10px',transform:'rotate(360deg)'});
     }
 });
+
 //search
-// if($(".search buton"))
 var button = $(".search_box button")[0];
-// var search_box = $(".search_box")[0];
-// var flag;
-// itcast(button).tap(function(e){
-//     console.log(e.changedTouches[0].clientX);
-    
-// })
-// $(".search div").slideToUnlock()
 button.addEventListener('touchmove',function(e){
     var maxWidth = $(".search_box input")[0].offsetWidth;
     $(".search_box input").attr("placeholder",'');
@@ -37,5 +30,3 @@ button.addEventListener('touchmove',function(e){
     }
    
 })
-// $(".search_box input").attr("placeholder",'>>>滑动我有惊喜哦'); 
-//     $(".search_box input").attr("placeholder",''); 

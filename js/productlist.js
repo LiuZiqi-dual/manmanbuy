@@ -62,7 +62,7 @@ function ajax() {
         }
     });
 }
-console.log($('#select option').length);
+
 
 //点击下一页
 var next = $(".foot_next .next")[0];

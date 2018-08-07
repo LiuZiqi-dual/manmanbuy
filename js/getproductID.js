@@ -16,7 +16,6 @@ var two_content = $.getUrlParam('categoryid');
  getproductPinglun();
  function getproductId(){
     $.get("http://193.112.55.79:9090/api/getproduct","productid="+productId,function(res){
-        //  console.log(res.result[0]);
         //渲染数据 电视广告
         var banner_img = template("banner_img",{data:res.result[0]})
          $(".banner").html(banner_img);
@@ -25,10 +24,10 @@ var two_content = $.getUrlParam('categoryid');
       var productName = res.result[0].productName;
       var  arr = productName.split(' ');
       //动态生成第三个标题
-         $(".head").append("<a href='#'>"+arr[0]+"</a>");
+         $(".head").append("<a href='./productlist.html?categoryid="+two_content+"'>"+arr[0]+"</a>");
          $(".table_content").html(res.result[0].bjShop);
 
-        
+    
      })
  }
 //  发送ajax   获取评论的数据
