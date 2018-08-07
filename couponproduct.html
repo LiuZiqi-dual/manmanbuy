@@ -3,23 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>凑单品--慢慢买比价网</title>
     <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/couponproduct.css">
     <link rel="stylesheet" href="fonts/iconfont.css">
+
+
 </head>
 
 <body>
     <!-- 头部标题 -->
     <header id="backTop">
-        <a href="javascript:;" class="a_icon">
+        <a href="coupon.html" class="a_icon" style="text-decoration: none">
             <i class="iconfont">&#xe697;</i>
         </a>
         <h2>肯德基优惠券</h2>
-        <a href="javascript:;" class="icon-app"></a>
+        <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap" class="icon-app"></a>
     </header>
     <div class="tit">--点餐前出示手机中的优惠券，即可享受优惠--</div>
     <!-- 优惠券内容部分开始 -->
@@ -29,18 +32,46 @@
 
         </ul>
     </div>
+    <!-- 轮播图部分 -->
+    <div id="carousel-example-generic" class="carousel slide lunbo" data-ride="carousel">
+
+
+
+        <!-- Wrapper for slides -->
+
+
+        <div class="carousel-inner lunboImg" role="listbox">
+
+            <!-- 轮播图占位专用 -->
+
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
 
 </body>
 <script src="lib/jquery.js"></script>
 <script src="art-template/template-web.js"></script>
-<script src="art-template/template-web.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
 <script src="js/getcouponproduct.js"></script>
+<script src="lib/layer/layer.js"></script>
+
+
 <script type="text/template" id="getcouponproductTmp">
     {{each data value}}
     <li>
+
         {{@ value.couponProductImg}}
         <div class="detail">
-            <a href="javascript:;">{{value.couponProductName}}</a>
+            <a href="javascript:;" onclick="fn({{value.couponProductId}})">{{value.couponProductName}}</a>
             <p>{{value.couponProductPrice}}</p>
             <span>&gt;</span>
         </div>
@@ -49,5 +80,71 @@
     </li>
     {{/each}}
 </script>
+<script>
+    function fn(couponProductId) {
+        // console.log(couponProductId)
+        // console.log($(".view>ul>li>img"));
+        var imgArr = [];
+        $(".view>ul>li>img").each(function (index, element) {
+            imgArr.push(element.src)
+        })
+        // console.log(imgArr)
+        // var couponProductImg = e.dataset.img;
+        // console.log(couponProductImg);
+        // // carouselImg();
+        // // 遮罩层js代码
+        layer.open({
+            type: 3,
+            //设置背景透明度和颜色
+            shade: [0.9, '#393D49'],
+            anim: 1,
+            time: 10000,
+            zIndex:-19891014,
+
+        });
+
+
+        var lunboStr = template("carsouselTmp", {
+            data: imgArr,
+            id: couponProductId
+        })
+        console.log(lunboStr);
+        $(".lunboImg").html(lunboStr);
+        // //轮播图js代码
+        $('.lunbo').toggle();
+        // $('.lunbo').css("display","block");
+
+    }
+
+    $('.lunbo').on("mouseleave", function () {
+        $('.lunbo').toggle();
+    })
+
+
+    $('.carousel').carousel({
+        interval: false, //设置轮播图不自动播放
+    })
+
+    // function carouselImg() {
+    //     $.ajax({
+    //         url: "http://193.112.55.79:9090/api/getcouponproduct",
+    //         type: 'get',
+    //         dataType: 'json',
+    //         success: function (res) {
+    //             // console.log(res);
+    //             // var htmlStr = template('carsouselTmp',{data:res.result});
+    //             // // console.log(htmlStr);
+    //             // $('.carousel-inner').html(htmlStr);
+    //         }
+    //     })
+    // }
+</script>
 
 </html>
+<script type="text/template" id="carsouselTmp">
+    {{each data value index}}
+    <div class="item {{  index == id?'active':''}}">
+        <img src=" {{@ value}}" alt="">
+    </div>
+    {{/each}}
+</script>

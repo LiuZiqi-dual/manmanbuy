@@ -71,8 +71,11 @@ if (button) {
     //===========================
     button.addEventListener('touchend', function (e) {
         var maxWidth = $(".search_box input")[0].offsetWidth/2;
+        //因为有时向右会停在中间，需要开一个一次性的定时器
           if(parseInt(button.style.left) > maxWidth){
-            button.style.left = $(".search_box input")[0].offsetWidth+'px';      
+              setTimeout(function(){
+                button.style.left = $(".search_box input")[0].offsetWidth+'px';   
+              },0)     
             //=======
              //到最后的时候
              $(".search_box")[0].style.paddingLeft = 0;
@@ -81,7 +84,7 @@ if (button) {
              $(".search_box button").css('fontSize', '12px')
              timer = setInterval(function () {
                  $(".search_box input").attr("placeholder", '  千万别点右边按钮啊!求你了').fadeOut(500).fadeIn(500);
-                 button.style.left = $(".search_box input")[0].offsetWidth+'px';    
+                //  button.style.left = $(".search_box input")[0].offsetWidth+'px';    
                  //搜索框有内容 ，清楚定时器
                  if ($(".search_box input").val() != '') {
                      //清楚定时器

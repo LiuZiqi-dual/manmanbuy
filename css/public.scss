@@ -3,18 +3,17 @@ body {
   /* 头部导航栏部份开始 */
   nav {
     height: 50px;
-    // background-color: #FF841D;
-    background-image: linear-gradient(to right bottom,#DF3C96,#E4007F);
+    background:linear-gradient(to left top,rgb(243, 76, 140),rgb(250, 2, 77),rgb(192, 66, 212));
     padding-left: 12px;
-    padding-right: 4px; // display: flex;
+    padding-right: 4px; // display: flex;     
     // justify-content: space-between;
     // align-items: center;
-    .logo {
-      width: 186px;
-      height: 100%;
+    .logo {  
+      width: 186px;  
+      height: 100%;   
       padding-top: 12px;
       a {
-        width: 100%;
+        width: 100%;   
         img {
           width: 186px;
         }

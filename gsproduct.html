@@ -17,7 +17,7 @@
     <header id="backTop">
         <div class="inner">
             <div class="left">
-                <a href="javascript:;">
+                <a href="index.html">
                     <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
                 </a>
             </div>
@@ -170,6 +170,7 @@
 
 <script>
     $(function () {
+
         $('.list-t ul li:eq(0)').on('click focus',function () {
             $('.select1').stop().toggle();
             $('.list-t ul li:eq(0) span').toggleClass('.glyphicon glyphicon-triangle-top');
@@ -206,13 +207,13 @@
             $('.menu-search').hide();
         })
         //点击类select1给li添加委托事件
-        $('.select1').on('click','li',function (e) {
+        $('.select1').on('click','a',function (e) {
             // console.log(e.target);
             shopid = e.target.dataset.id;
             // console.log(shopid);
             detail();
         })
-        $('.select2').on('click','li',function (e) {
+        $('.select2').on('click','a',function (e) {
             areaid = e.target.dataset.id;
             // console.log(areaid);
             detail();
@@ -251,10 +252,8 @@
             <div class="other">
                 <div class="price">
                     <i style='font-size:20px'>{{ value.productPrice }}</i>
-
                 </div>
                 <button>去凑单</button>
-
             </div>
         </a>
     </li>

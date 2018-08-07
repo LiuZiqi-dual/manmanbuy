@@ -44,7 +44,7 @@ header .icon-app {
 }
 
 .view ul li {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid rgba(73, 73, 81, 0.2);
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,10 +56,12 @@ header .icon-app {
 }
 
 .view ul li img {
+  z-index: -19891014;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  max-width: 40%;
+  max-width: 140px;
+  height: 130px;
   padding: 12px 12px 0 12px;
 }
 
@@ -95,12 +97,27 @@ header .icon-app {
 }
 
 .view ul li .date {
+  z-index: -19891014;
   width: 100%;
   color: #ff9900;
   padding: 15px 0;
+<<<<<<< HEAD
   height: 30px;
   line-height: 30px;
+=======
+>>>>>>> b11efd4abbb3ad80582a26e4f321ee7d49c3ee28
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
+}
+
+.lunbo {
+  width: 200px;
+  height: 160px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
 }
 /*# sourceMappingURL=couponproduct.css.map */
