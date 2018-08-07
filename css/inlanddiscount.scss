@@ -1,7 +1,9 @@
 #backTop {
+    padding-left: 0; 
     .logo {
-        width: 20%;
+        width: 10%;
         padding-top:25px;
+        padding-left: 12px;
         color:#fff;
         .icon_back_top{
             font-family: "iconfont" !important;
@@ -16,7 +18,7 @@
     p {
         display: block;
         float: left;
-        width: 200px;
+        width: 100px;
         height: 50px;
         color: #fff;
         text-align: center;
@@ -25,7 +27,7 @@
     }
 }
 .getinlanddiscount {
-    ul {
+    ul {  
         li {
             float: left;
             width: 50%;
@@ -39,8 +41,7 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 img {
-                    height: 62%;
-                    // width: 100%;
+                    height: 62%; 
                 }
                 strong {
                     height: 18%;
@@ -83,4 +84,3 @@
         }
     }
 }
-

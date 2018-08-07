@@ -1,7 +1,12 @@
 @charset "UTF-8";
+#backTop {
+  padding-left: 0;
+}
+
 #backTop .logo {
-  width: 20%;
+  width: 10%;
   padding-top: 25px;
+  padding-left: 12px;
   color: #fff;
 }
 
@@ -18,7 +23,7 @@
 #backTop p {
   display: block;
   float: left;
-  width: 200px;
+  width: 100px;
   height: 50px;
   color: #fff;
   text-align: center;
@@ -91,4 +96,4 @@
 .getinlanddiscount ul li:nth-child(odd) {
   border-right: 1px solid #ccc;
 }
-/*# sourceMappingURL=getinlanddiscount.css.map */
+/*# sourceMappingURL=inlanddiscount.css.map */
