@@ -47,9 +47,9 @@
         <a href="javascript:;">首页</a>&gt;
       </span>
       <span>
-        <a href="javascript:;">全部分类</a>&gt;
+        <a href="category.html">全部分类</a>&gt;
       </span>
-      <span>
+      <span class="temp_category">
         <a href="javascript:;">
           模板
         </a>&gt;
@@ -69,7 +69,7 @@
       <li>
         <div class="productImg fl"></div>
         <div class="productData">
-          <p class="productName">模板替换</p> 
+          <p class="productName">模板替换</p>
           <h5 class="productPrice">模板替换</h5>
           <div class="comment">
             <span class="productQuote">模板替换</span>
@@ -80,7 +80,7 @@
     </ul>
   </div>
   <!-- 商品列表部分结束 -->
-  
+
   <!-- 底部固定部分开始 -->
   <div class="market">
     <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap">
@@ -124,18 +124,26 @@
 <script src="./lib/tap-swpie.js"></script>
 <script src="./js/productlist.js"></script>
 <!-- 三级菜单模板 -->
-<script type="text/template" id="">
-  {{each res val key}}
+<script type="text/template" id="menutree_template">
+  {{each res val key}} {{val.category}} {{/each}}
+</script>
+<!-- 商品列表模板 -->
+<script type="text/template" id="productlist_template">
+  {{each data val key}}
   <li>
-    <div class="productImg fl"></div>
-    <div class="productData">
-      <p class="productName">模板替换</p> 
-      <h5 class="productPrice">模板替换</h5>
-      <div class="comment">
-        <span class="productQuote">模板替换</span>
-        <span class="productCom fr">模板替换</span>
+    <a href="getproductID.html?productId={{val.productId}}">
+      <div class="productImg fl">
+        {{@val.productImg}}
       </div>
-    </div>
+      <div class="productData">
+        <p class="productName">{{val.productName}}</p>
+        <h5 class="productPrice">{{val.productPrice}}</h5>
+        <div class="comment">
+          <span class="productQuote">{{val.productQuote}}</span>
+          <span class="productCom fr">{{val.productCom}}</span>
+        </div>
+      </div>
+    </a>
   </li>
   {{/each}}
 </script>
