@@ -54,8 +54,9 @@ $color :rgb(255, 132, 29);
         width: 100%;
         padding: 0 10px;
         ul {
+
             li {
-                justify-content: space-between;
+                transition: transform 1s , opacity 1s;
                 a{  
                     display: block;
                     width: 100%;
@@ -71,4 +72,13 @@ $color :rgb(255, 132, 29);
             }
         }
     }
+}
+
+.odd {
+    transform:translateX(500px);
+    opacity: 0;
+}
+.even {
+    transform:translateX(-500px);
+    opacity: 0;
 }

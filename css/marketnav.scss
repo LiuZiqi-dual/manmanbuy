@@ -39,6 +39,7 @@ header {
         justify-content: space-around;
         flex-wrap: wrap;
         li{
+            transition: transform 1s , opacity 2s;
             background-color: #fff;
             width: 27%;
             display: flex;
@@ -69,5 +70,16 @@ header {
             }
         }
     }
+}
+.mulone {
+    transform: translateX(-500px) rotateY(360deg);
+    opacity: 0;
+}
+.multhree {
+    transform: translateX(500px) rotateY(-360deg);
+    opacity: 0;
+}
+.multwo {
+    opacity: 0;
 }
 

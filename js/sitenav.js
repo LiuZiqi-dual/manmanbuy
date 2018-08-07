@@ -1,7 +1,7 @@
 //导航的获取
 var ul = document.querySelector('.navlis ul');
 var backbtn = document.querySelector('.backbtn');
-var backtop = document.querySelector('.back_top');
+var backtop = document.querySelector('.backup');
 $.ajax({
     url:'http://193.112.55.79:9090/api/getsitenav',
     type:'get',
@@ -10,6 +10,12 @@ $.ajax({
        var arr = res.result;
        var htmlStr = template('navlis',{data:arr});
        ul.innerHTML = htmlStr;
+       var lis = document.querySelectorAll('.navlis li');
+       setTimeout(function(){
+           for(var i=0; i<lis.length; i++) {
+               lis[i].className = '';
+           }
+       },300)
     }
 })
 

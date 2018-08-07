@@ -71,8 +71,8 @@
       <div class="signin">
         <a href="register.html">注册</a>
       </div>
-      <div class="back_top">
-        <a href="#backTop">
+      <div class="back_top backup">
+        <a href="javascript:;">
           <i class="icon_back_top">&#xe6a5;</i>返回顶部
         </a>
       </div>
@@ -91,7 +91,13 @@
 <!-- 品牌列表模板 -->
 <script type="text/template" id="listTmp">
     {{each data value index}}
-        <li>
+        <li class='
+          {{if index%2==0}}
+          even
+          {{else}}
+          odd
+          {{/if}}
+        '>
             <a href="./distop.html?id={{value.brandTitleId}}">
                 <span>{{value.brandTitle}}</span>
                 <span class="iconfont icon-moreunfold"></span>

@@ -63,9 +63,10 @@
 }
 
 .allbrand .listbrand ul li {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-transition: opacity 1s , -webkit-transform 1s;
+  transition: opacity 1s , -webkit-transform 1s;
+  transition: transform 1s , opacity 1s;
+  transition: transform 1s , opacity 1s , -webkit-transform 1s;
 }
 
 .allbrand .listbrand ul li a {
@@ -80,5 +81,17 @@
 .allbrand .listbrand ul li a span:last-child {
   float: right;
   padding-right: 10px;
+}
+
+.odd {
+  -webkit-transform: translateX(500px);
+          transform: translateX(500px);
+  opacity: 0;
+}
+
+.even {
+  -webkit-transform: translateX(-500px);
+          transform: translateX(-500px);
+  opacity: 0;
 }
 /*# sourceMappingURL=brand.css.map */

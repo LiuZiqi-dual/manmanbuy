@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="./fonts/iconfont.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./lib/css/bootstrap.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/marketnav.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <span class="iconfont icon-back backbtn"></span>
+      <!-- 手机没有hover，用了也没用 -->
+        <span class="iconfont icon-back backbtn" data-toggle="tooltip" data-placement="bottom" title="这里用的是history.back(),慎用，可惜手机端也看不见"></span>
         <h2>商场导航</h2>
         <a href="#"><img src="./imgs/xiazai.png" alt=""></a>
     </header>
@@ -30,9 +32,8 @@
       <img src="./images/market.png" alt="">
     </a>
   </div>
-  <div class="back_top_btn">
-    <a href="#backTop">
-      <i class="icon_back_top">&#xe6a5;</i>
+  <div class="back_top">
+    <a href="javascript:;">
     </a>
   </div>
   <!-- 底部固定部分结束 -->
@@ -45,7 +46,7 @@
       <div class="signin">
         <a href="register.html">注册</a>
       </div>
-      <div class="back_top">
+      <div class="back_top backup">
         <a href="javascript:;">
           <i class="icon_back_top">&#xe6a5;</i>返回顶部
         </a>
@@ -59,11 +60,20 @@
   <!-- footer部分结束 -->
 </body>
 <script src="./js/jquery-1.12.2.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.js"></script>
 <script src="./js/sitenav.js"></script>
 <script src="./art-template/template-web.js"></script>
 <script type="text/template" id="navlis">
     {{each data value index}}
-    <li>
+    <li class='
+    {{if index%2==0}}
+    multwo
+    {{else if index%3==0}}
+    multhree
+    {{else}}
+    mulone
+    {{/if}}
+    '>
         <a href="{{value.navHref}}">
             <div><img src="{{value.navImg}}" alt=""></div>
             <span>{{value.navTitle}}</span>

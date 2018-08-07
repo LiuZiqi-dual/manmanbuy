@@ -52,6 +52,10 @@ header a img {
 }
 
 .navlis ul li {
+  -webkit-transition: opacity 2s , -webkit-transform 1s;
+  transition: opacity 2s , -webkit-transform 1s;
+  transition: transform 1s , opacity 2s;
+  transition: transform 1s , opacity 2s , -webkit-transform 1s;
   background-color: #fff;
   width: 27%;
   display: -webkit-box;
@@ -100,5 +104,21 @@ header a img {
 
 .navlis ul li a span {
   text-align: center;
+}
+
+.mulone {
+  -webkit-transform: translateX(-500px) rotateY(360deg);
+          transform: translateX(-500px) rotateY(360deg);
+  opacity: 0;
+}
+
+.multhree {
+  -webkit-transform: translateX(500px) rotateY(-360deg);
+          transform: translateX(500px) rotateY(-360deg);
+  opacity: 0;
+}
+
+.multwo {
+  opacity: 0;
 }
 /*# sourceMappingURL=marketnav.css.map */

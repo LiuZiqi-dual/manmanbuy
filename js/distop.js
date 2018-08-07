@@ -4,6 +4,7 @@ var locaId = arr[1];
 var rackul = document.querySelector('.rack ul');
 var allbrands = document.querySelector('.allbrands');
 var comment = document.querySelector('.comment');
+var backtop = document.querySelector('.backup');
 
 
 //获取评论图片

@@ -33,6 +33,8 @@
     </div>
   </nav>
   <!-- 导航栏部分结束 -->
+
+  
   <!-- 固定下载连接部分开始 -->
   <div class="market">
     <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap">
@@ -90,8 +92,8 @@
       <div class="signin">
         <a href="register.html">注册</a>
       </div>
-      <div class="back_top">
-        <a href="#backTop">
+      <div class="back_top backup">
+        <a href="javascript:;">
           <i class="icon_back_top">&#xe6a5;</i>返回顶部
         </a>
       </div>
@@ -127,7 +129,7 @@
 <!-- 页面模板 -->
 <script type="text/template" id="allbrands">
   {{each data value index}}
-    <a class="detaillist clearfix" href="getmoneyID.html?productid={{value.productId}}">
+    <a class="detaillist clearfix" href="getproductID.html?productId={{value.productId}}&categoryid={{value.categoryId}}">
       <div class="listleft clearfix">
         <div class="productimg">
           {{@value.productImg}}
