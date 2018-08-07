@@ -21,9 +21,11 @@ $(function () {
           });
           // 当页面到达底部的时候,再次加载数据
           function nearbyData(){
+            // $(".dvg").hide();
             setTimeout(function(){
               $("li").eq(15).nextAll().show();
-            }, 300);
+              $(".dvg").hide()
+            }, 500);
           }
       //  点击事件,商品页跳转回主页
         $(".logo").on('click',function(){
