@@ -1,6 +1,5 @@
 var categoryid = location.search.substr(12);
-// console.log(categoryid);
-
+console.log(categoryid);
 $.ajax({
     type: "get",
     url: "http://193.112.55.79:9090/api/getcategorybyid",
@@ -29,8 +28,6 @@ $.ajax({
 //接受id
 var pageid = $.getUrlParam('pageid');
 pageid = pageid || 1;
-console.log(pageid);
-
 ajax();
 
 
@@ -43,9 +40,7 @@ function ajax() {
         dataType: "json",
         success: function (data) {
             var num2 = [];
-            
-            
-            console.log(data.result);
+            console.log(data);
             $('.container ul').html(template(
                 'productlist_template', {
                     data: data.result
@@ -53,38 +48,37 @@ function ajax() {
             ));
             data.totalCount = Math.ceil(data.totalCount / data.pagesize);
             for (var e = 0; e < data.totalCount; e++) {
-                num2.push(data.totalCount);
-                
+                //总页数
+                num2.push(data.totalCount);     
             }
-            console.log(num2);
 
             // 分页渲染
             var foot_nav = template("template2", {
                 data: num2
             });
             $('#select').html(foot_nav);
-            $('#select option').eq(pageid).prop("selected", true).siblings().prop('selected', false);
+            $('#select option').eq(pageid-1).prop("selected", true).siblings().prop('selected', false);
 
         }
     });
 }
+console.log($('#select option').length);
 
 //点击下一页
 var next = $(".foot_next .next")[0];
 var prev = $(".foot_next .prev")[0];
 itcast(next).tap(function () {
     //判断如果等于最后一页  就不再加载
-    if (pageid == $('#select option').length - 1) {
+    if (pageid == $('#select option').length ) {
         layer.msg('已经是最后一页了哦');
         return;
     }
     pageid += 1;
-    console.log(pageid);
     ajax();
 })
 itcast(prev).tap(function () {
     //判断如果等于最后一页  就不再加载
-    if (pageid == 0) {
+    if (pageid == 1) {
         layer.msg('这是第一页了哦');
         return;
     }
@@ -94,7 +88,7 @@ itcast(prev).tap(function () {
 
 //下拉菜单获取数据
 $("#select").on('change', function () {
-    var val = this.value - 1;
+    var val = this.value ;
     pageid = val;
     ajax();
     //调到顶部
