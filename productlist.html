@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>慢慢买比价网——放心购物，我们绝不外链到拼多多</title>
   <link rel="shortcut icon" href="./favicon.ico">
-  <!-- <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css"> -->
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/public.css">
+  <link rel="stylesheet" href="./css/moneyctrl.css">
   <link rel="stylesheet" href="./css/productlist.css">
   <meta name="description" content="慢慢买比价网-专业的综合网上比价商城,数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!" />
   <meta name="Keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,慢慢买比价网" />
@@ -47,9 +47,9 @@
         <a href="javascript:;">首页</a>&gt;
       </span>
       <span>
-        <a href="javascript:;">全部分类</a>&gt;
+        <a href="category.html">全部分类</a>&gt;
       </span>
-      <span>
+      <span class="temp_category">
         <a href="javascript:;">
           模板
         </a>&gt;
@@ -69,7 +69,7 @@
       <li>
         <div class="productImg fl"></div>
         <div class="productData">
-          <p class="productName">模板替换</p> 
+          <p class="productName">模板替换</p>
           <h5 class="productPrice">模板替换</h5>
           <div class="comment">
             <span class="productQuote">模板替换</span>
@@ -80,7 +80,9 @@
     </ul>
   </div>
   <!-- 商品列表部分结束 -->
-  
+
+
+
   <!-- 底部固定部分开始 -->
   <div class="market">
     <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap">
@@ -96,6 +98,21 @@
   <!-- 底部固定部分结束 -->
   <!-- footer部分开始 -->
   <footer>
+    <!-- 分页部分开始 -->
+    <div class="foot_next">
+      <a href="#backTop">
+        <button class="prev">上一页</button>
+      </a>
+      <div class="select_box">
+        <select name="" id="select">
+
+        </select>
+      </div>
+      <a href="#backTop">
+        <button class="next">下一页</button>
+      </a>
+    </div>
+    <!-- 分页部分结束 -->
     <div class="foot_func">
       <div class="login">
         <a href="login.html">登录</a>
@@ -122,23 +139,38 @@
 <script src="./js/template-web.js"></script>
 <script src="./js/public.js"></script>
 <script src="./lib/tap-swpie.js"></script>
+<script src="./lib/提示信息插件/layer.js"></script>
 <script src="./js/productlist.js"></script>
 <!-- 三级菜单模板 -->
-<script type="text/template" id="">
-  {{each res val key}}
+<script type="text/template" id="menutree_template">
+  {{each res val key}} {{val.category}} {{/each}}
+</script>
+<!-- 商品列表模板 -->
+<script type="text/template" id="productlist_template">
+  {{each data val key}}
   <li>
-    <div class="productImg fl"></div>
-    <div class="productData">
-      <p class="productName">模板替换</p> 
-      <h5 class="productPrice">模板替换</h5>
-      <div class="comment">
-        <span class="productQuote">模板替换</span>
-        <span class="productCom fr">模板替换</span>
+    <a href="getproductID.html?productId={{val.productId}}&categoryid={{val.categoryId}}">
+      <div class="productImg fl">
+        {{@val.productImg}}
       </div>
-    </div>
+      <div class="productData">
+        <p class="productName">{{val.productName}}</p>
+        <h5 class="productPrice">{{val.productPrice}}</h5>
+        <div class="comment">
+          <span class="productQuote">{{val.productQuote}}</span>
+          <span class="productCom fr">{{val.productCom}}</span>
+        </div>
+      </div>
+    </a>
   </li>
   {{/each}}
 </script>
+<!-- 分页数据模板 -->
+<script type="text/template" id="template2">
+  {{each data val key}}
+  <option value="{{key+1}}">{{"第"+(key+1)+"页"}}/{{'共'+(val)+'页'}}</option>
+  {{/each}}
 
+</script>
 
 </html>

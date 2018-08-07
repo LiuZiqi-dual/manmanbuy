@@ -22,7 +22,9 @@ $.ajax({
                 $.get("http://193.112.55.79:9090/api/getcategory", 'titleid=' + index,
                     function (data) {
                         console.log(data.result);
-                        // console.log(titleid-1+2);
+                        // console.log(template('category_detail_template', {
+                        //     data: data.result
+                        // }));
                         // var listNum = $('.panel-body:nth-child('+(titleid-1+2)+')');
                         $('.panel-body').html(template('category_detail_template', {
                             data: data.result

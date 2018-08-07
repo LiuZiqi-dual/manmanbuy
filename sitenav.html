@@ -6,24 +6,61 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./fonts/iconfont.css">
     <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/marketnav.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <span class="iconfont icon-back"></span>
+        <span class="iconfont icon-back backbtn"></span>
         <h2>商场导航</h2>
         <a href="#"><img src="./imgs/xiazai.png" alt=""></a>
     </header>
-    <nav>
+    <div class="navlis">
         <ul>
             
         </ul>
-    </nav>
+    </div>
+
+
+    <!-- 底部固定部分开始 -->
+<div class="market">
+    <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap">
+      <img src="./images/market.png" alt="">
+    </a>
+  </div>
+  <div class="back_top_btn">
+    <a href="#backTop">
+      <i class="icon_back_top">&#xe6a5;</i>
+    </a>
+  </div>
+  <!-- 底部固定部分结束 -->
+  <!-- footer部分开始 -->
+  <footer>
+    <div class="foot_func">
+      <div class="login">
+        <a href="login.html">登录</a>
+      </div>
+      <div class="signin">
+        <a href="register.html">注册</a>
+      </div>
+      <div class="back_top">
+        <a href="javascript:;">
+          <i class="icon_back_top">&#xe6a5;</i>返回顶部
+        </a>
+      </div>
+    </div>
+    <div class="copyright">
+      <p><a href="http://m.manmanbuy.com/app.html?type=headword&value=wap">手机APP下载</a>慢慢买手机版 -- 掌上比价平台</p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+  <!-- footer部分结束 -->
 </body>
 <script src="./js/jquery-1.12.2.js"></script>
-<script src="./js/marketnav.js"></script>
-<script src="./bil/art-template/template-web.js"></script>
+<script src="./js/sitenav.js"></script>
+<script src="./art-template/template-web.js"></script>
 <script type="text/template" id="navlis">
     {{each data value index}}
     <li>
