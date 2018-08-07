@@ -4,96 +4,33 @@ $(function () {
       url: "http://193.112.55.79:9090/api/getinlanddiscount",
       dataType: 'json',
       success: function (res) {
+        // 接收模板
         var data = template("temp", res);
-        $("#thelist").html(data);
-        // $("li").eq(15).nextAll().hide();
+        // 添加模板
+        $(".getinlanddiscount ul").html(data);
+        // 演示下拉刷新功能
+         $("li").eq(15).nextAll().hide();
+         // 思路： 判断 滚动条滑动距离到底部XX距离的时候调用ajax方法=>{scrollTop()>=$(document).height()-$(window).height() }，然后添加到容器最下面（append() ）
+         $(window).scroll(function(){
+          　　var scrollTop = $(this).scrollTop();
+          　　var scrollHeight = $(document).height();
+          　　var windowHeight = $(this).height();
+          　　if(scrollTop + windowHeight == scrollHeight){
+          　　 nearbyData();//加载数据的函数
+          　　}
+          });
+          // 当页面到达底部的时候,再次加载数据
+          function nearbyData(){
+            setTimeout(function(){
+              $("li").eq(15).nextAll().show();
+            }, 300);
+          }
+      //  点击事件,商品页跳转回主页
+        $(".logo").on('click',function(){
+          location.href="index.html";
+        })
       }
     });
   });
 
-  var myScroll,
-        pullDownEl, 
-        pullDownOffset,
-        pullUpEl, 
-        pullUpOffset,
-        generatedCount = 0;
-      function pullDownAction () {
-        setTimeout(function () {
-          $("li").eq(15).nextAll().hide();
-           $(".dvg").show();
-          myScroll.refresh();
-         
-        }, 1000);
-      }
-      
-      function pullUpAction () {
-        setTimeout(function () {
-          $("li").eq(15).nextAll().show();
-          $(".dvg").hide();
-          myScroll.refresh();
-        }, 1000);
-        
-      }
-      
-      function loaded() {
-        pullDownEl = document.getElementById('pullDown');
-        pullDownOffset = pullDownEl.offsetHeight;
-        pullUpEl = document.getElementById('pullUp');	
-        pullUpOffset = 10;
-        //pullUpOffset = pullUpEl.offsetHeight;
-        myScroll = new iScroll('wrapper', {
-          useTransition: true,
-          topOffset: pullDownOffset,
-          onRefresh: function () {
-            if (pullDownEl.className.match('loading')) {
-              pullDownEl.className = '';
-              pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Pull down to refresh...';}
-            if (pullUpEl.className.match('loading')) {
-              pullUpEl.className = '';
-              pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
-            }
-            
-            document.getElementById("pullUp").style.display="none";
-            document.getElementById("show").innerHTML="onRefresh: up["+pullUpEl.className+"],down["+pullDownEl.className+"],Y["+this.y+"],maxScrollY["+this.maxScrollY+"],minScrollY["+this.minScrollY+"],scrollerH["+this.scrollerH+"],wrapperH["+this.wrapperH+"]";
-          },
-          onScrollMove: function () {
-            document.getElementById("show").innerHTML="onScrollMove: up["+pullUpEl.className+"],down["+pullDownEl.className+"],Y["+this.y+"],maxScrollY["+this.maxScrollY+"],minScrollY["+this.minScrollY+"],scrollerH["+this.scrollerH+"],wrapperH["+this.wrapperH+"]";
-            if (this.y > 0) {
-              pullDownEl.className = 'flip';
-              pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Release to refresh...';
-              this.minScrollY = 0;
-            }
-            if (this.y < 0 && pullDownEl.className.match('flip')) {
-              pullDownEl.className = '';
-              pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Pull down to refresh...';
-              this.minScrollY = -pullDownOffset;
-            }
-            
-            if ( this.scrollerH < this.wrapperH && this.y < (this.minScrollY-pullUpOffset) || this.scrollerH > this.wrapperH && this.y < (this.maxScrollY - pullUpOffset) ) {
-              document.getElementById("pullUp").style.display="";
-              pullUpEl.className = 'flip';
-              pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Release to refresh...';
-            } 
-             if (this.scrollerH < this.wrapperH && this.y > (this.minScrollY-pullUpOffset) && pullUpEl.className.match('flip') || this.scrollerH > this.wrapperH && this.y > (this.maxScrollY - pullUpOffset) && pullUpEl.className.match('flip')) {
-              document.getElementById("pullUp").style.display="none";
-              pullUpEl.className = '';
-              pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
-            }
-          },
-          onScrollEnd: function () {
-            document.getElementById("show").innerHTML="onScrollEnd: up["+pullUpEl.className+"],down["+pullDownEl.className+"],Y["+this.y+"],maxScrollY["+this.maxScrollY+"],minScrollY["+this.minScrollY+"],scrollerH["+this.scrollerH+"],wrapperH["+this.wrapperH+"]";
-            if (pullDownEl.className.match('flip')) {
-              pullDownEl.className = 'loading';
-              pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Loading...';				
-              pullDownAction();	// Execute custom function (ajax call?)
-            } 
-             if (pullUpEl.className.match('flip')) {
-              pullUpEl.className = 'loading';
-              pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Loading...';		
-              pullUpAction();	// Execute custom function (ajax call?)
-            }
-          }
-        });
-      };
-      document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-      document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+  
