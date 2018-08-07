@@ -1,8 +1,10 @@
+$col-rose:#E3119F;
 body {
   /* 头部导航栏部份开始 */
   nav {
     height: 50px;
-    background-color: #FF841D;
+    // background-color: #FF841D;
+    background-image: linear-gradient(to right bottom,#DF3C96,#E4007F);
     padding-left: 12px;
     padding-right: 4px; // display: flex;
     // justify-content: space-between;
@@ -59,7 +61,7 @@ body {
         width: 64px;
         height: 30px;
         line-height: 100%;
-        background-color: #FF841D;
+        background-color: $col-rose;
         border: 0px solid transparent;
         border-radius: 15px;
         font-size: 16px;
@@ -166,5 +168,6 @@ body {
   }
   /* footer部分结束 */
 }
+
 
 

@@ -52,7 +52,7 @@ header .icon-app {
   width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 180px;
+  height: 250px;
 }
 
 .view ul li img {
@@ -60,7 +60,6 @@ header .icon-app {
       -ms-flex: 1;
           flex: 1;
   max-width: 40%;
-  max-height: 50%;
   padding: 12px 12px 0 12px;
 }
 
@@ -73,9 +72,11 @@ header .icon-app {
 
 .view ul li .detail a {
   display: block;
+  padding: 14px 0;
   color: #000;
   font-size: 16px;
-  padding:0 12px;
+  line-height: 24px;
+  padding-right: 12px;
   margin-top: 12px;
 }
 
@@ -96,6 +97,9 @@ header .icon-app {
 .view ul li .date {
   width: 100%;
   color: #ff9900;
+  padding: 15px 0;
+  height: 30px;
+  line-height: 30px;
   text-align: center;
   font-size: 16px;
 }

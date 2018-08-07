@@ -68,7 +68,8 @@ body{
     /* 超值折扣推荐部分开始 */
     .hotlist{
         .hotlist_nav{
-            background-color: #FF841D;
+            // background-color: #FF841D;
+            background-image: linear-gradient(to right,#DF3C96,#E4007F);
             height: 36px;
             a{
                 height: 100%;
@@ -120,7 +121,8 @@ body{
         }
     }
     .hotlist_nav{
-        background-color: #FF841D;
+        // background-color: #FF841D;
+        background-image: linear-gradient(to right,#DF3C96,#E4007F);
         height: 36px;
         a{
             height: 100%;

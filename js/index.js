@@ -1,3 +1,4 @@
+//渲染页面
 $.ajax({
     type: "get",
     url: "http://193.112.55.79:9090/api/getindexmenu",
@@ -21,3 +22,9 @@ $.get("http://193.112.55.79:9090/api/getmoneyctrl",'',function(res){
     // console.log(res);
     
 },'json')
+
+//隐藏第三行效果
+$('.cat_nav div').on('click',function(){
+    console.log(123);
+    
+});;

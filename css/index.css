@@ -48,7 +48,8 @@ body .cat_nav div a span {
 }
 
 body .hotlist .hotlist_nav {
-  background-color: #FF841D;
+  background-image: -webkit-gradient(linear, left top, right top, from(#DF3C96), to(#E4007F));
+  background-image: linear-gradient(to right, #DF3C96, #E4007F);
   height: 36px;
 }
 
@@ -117,7 +118,8 @@ body .more_hotlist div a {
 }
 
 body .hotlist_nav {
-  background-color: #FF841D;
+  background-image: -webkit-gradient(linear, left top, right top, from(#DF3C96), to(#E4007F));
+  background-image: linear-gradient(to right, #DF3C96, #E4007F);
   height: 36px;
 }
 
