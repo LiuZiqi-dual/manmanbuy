@@ -41,7 +41,6 @@ var two_content = $.getUrlParam('categoryid');
  }
  //发送拿取二级菜单的标题
  $.get("http://193.112.55.79:9090/api/getcategorybyid","categoryid="+two_content,function(res){
-     console.log(res.result[0].category);
       //改变第二级标题的内容
       $(".head a").eq(1).html(res.result[0].category+" >")
  })

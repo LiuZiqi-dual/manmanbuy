@@ -1,12 +1,10 @@
 var categoryid = location.search.substr(12);
-console.log(categoryid);
 $.ajax({
     type: "get",
     url: "http://193.112.55.79:9090/api/getcategorybyid",
     data: "categoryid=" + categoryid,
     dataType: "json",
     success: function (res) {
-        console.log(res.result);
         $('.menutree .menu .temp_category a').html(
             template(
                 'menutree_template', {
@@ -40,7 +38,6 @@ function ajax() {
         dataType: "json",
         success: function (data) {
             var num2 = [];
-            console.log(data);
             $('.container ul').html(template(
                 'productlist_template', {
                     data: data.result
