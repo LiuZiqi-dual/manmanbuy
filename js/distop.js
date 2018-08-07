@@ -104,7 +104,7 @@ $.ajax({
 changesize();
 function changesize(){
     var htmlsize = 100;
-    var htmlwidth = 500;
+    var htmlwidth = 1200;
     var newwidth = document.querySelector('html').offsetWidth;
     var newsize = newwidth*htmlsize/htmlwidth;
     document.querySelector('html').style.fontSize = newsize+'px';
@@ -114,3 +114,11 @@ function changesize(){
 window.onresize = function(){
     changesize();
 }
+
+
+//返回顶部
+backtop.addEventListener('click',function(){
+    // console.log(document.documentElement.scrollTop);
+    document.documentElement.scrollTop = 0;
+    // $(window).scrollTop(0);
+})

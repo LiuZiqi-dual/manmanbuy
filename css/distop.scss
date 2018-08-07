@@ -167,7 +167,7 @@ $color :rgb(255, 132, 29);
     }
     .comment_bottom{
         position: relative;
-        &:before{
+        &:after{
             content: '';
             width: 0;
             height: 0;
