@@ -136,6 +136,11 @@ body .hotlist .hotlist_nav a .hrefmore .iconfont_hrefmore {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body .shangping {
+  font-size: 14px;
+  font-family: micro Yahei;
+}
+
 body .more_hotlist {
   padding: 0 10px;
   height: 60px;

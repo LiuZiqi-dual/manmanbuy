@@ -20,7 +20,6 @@ $.ajax({
                 // console.log(index);
                 $.get("http://193.112.55.79:9090/api/getcategory", 'titleid=' + index,
                     function (data) {
-                        console.log(data.result);
                         // console.log(template('category_detail_template', {
                         //     data: data.result
                         // }));

@@ -141,7 +141,8 @@
   border: none;
   height: 100%;
   width: 90px;
-  background-color: #ff841d;
+  background: -webkit-gradient(linear, right bottom, left top, from(#f34c8c), color-stop(#fa024d), to(#c042d4));
+  background: linear-gradient(to left top, #f34c8c, #fa024d, #c042d4);
 }
 
 .getdiscountproduct .pl #newcomment {
@@ -161,6 +162,7 @@
   font-size: 16px;
   text-align: center;
   line-height: 40px;
-  background-color: orange;
+  background: -webkit-gradient(linear, right bottom, left top, from(#f34c8c), color-stop(#fa024d), to(#c042d4));
+  background: linear-gradient(to left top, #f34c8c, #fa024d, #c042d4);
 }
 /*# sourceMappingURL=getdiscountproduct.css.map */
