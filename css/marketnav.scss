@@ -4,10 +4,10 @@ $color:rgb(255, 132, 29);
 //头部部分
 header {
     height: 45px;
-    background-color: $color;
+    background:linear-gradient(to left top,rgb(243, 76, 140),rgb(250, 2, 77),rgb(192, 66, 212));
     color: #fff;
     display: flex;
-   justify-content: space-between;
+   justify-content: space-between; 
    align-items: center;
    span {
         width: 50px;
@@ -39,6 +39,9 @@ header {
         justify-content: space-around;
         flex-wrap: wrap;
         li{
+            // transform: rotateY(180deg);  
+            // transform-style: preserve-3d;
+            position: relative;
             transition: transform 1s , opacity 2s;
             background-color: #fff;
             width: 27%;
@@ -68,6 +71,16 @@ header {
                     text-align: center;
                 }
             }
+            // .afterbox {
+            //     display: block;
+            //     width: 100%;
+            //     height: 100%;
+            //     background-color: aqua;
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     transform: translateZ(-1px);
+            // }
         }
     }
 }

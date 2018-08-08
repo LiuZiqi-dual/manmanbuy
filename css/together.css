@@ -1,6 +1,7 @@
 header {
   height: 44px;
-  background-color: #ff8b00;
+  background: -webkit-gradient(linear, right bottom, left top, from(#f34c8c), color-stop(#fa024d), to(#c042d4));
+  background: linear-gradient(to left top, #f34c8c, #fa024d, #c042d4);
   -webkit-box-shadow: 0px 2px 3px #dddddd;
           box-shadow: 0px 2px 3px #dddddd;
 }
@@ -377,13 +378,5 @@ body footer .copyright {
 body footer .copyright p a {
   font-size: 12px;
   color: #FF0000;
-}
-
-.block {
-  display: block;
-}
-
-.none {
-  display: none;
 }
 /*# sourceMappingURL=together.css.map */

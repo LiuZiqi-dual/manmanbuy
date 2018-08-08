@@ -2,7 +2,8 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #f4483e;
+  background: -webkit-gradient(linear, right bottom, left top, from(#f34c8c), color-stop(#fa024d), to(#c042d4));
+  background: linear-gradient(to left top, #f34c8c, #fa024d, #c042d4);
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
