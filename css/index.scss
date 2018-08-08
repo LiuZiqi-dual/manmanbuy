@@ -133,6 +133,7 @@ body {
             }
         }
     }
+ 
     .hotlist_nav {
         // background-color: #FF841D;
         background-image: linear-gradient(to right, #DF3C96, #E4007F);
@@ -167,4 +168,11 @@ body {
         }
     }
     /* 主页底部剩余部分结束 */
+}
+footer{    
+    .copyright{  
+        p{      
+          color:#785c5c; 
+        }
+    }
 }

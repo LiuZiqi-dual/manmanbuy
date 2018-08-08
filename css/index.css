@@ -211,4 +211,8 @@ body .hotlist_nav a .hrefmore .iconfont_hrefmore {
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
+
+footer .copyright p {
+  color: #785c5c;
+}
 /*# sourceMappingURL=index.css.map */

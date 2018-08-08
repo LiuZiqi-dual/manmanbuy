@@ -229,19 +229,20 @@
 </script>
 <script>      
   var mySwiper = new Swiper ('.swiper-container', {
+   speed:1500,
     autoplay: {
-    delay: 1500,//1秒切换一次
-    disableOnInteraction: false,
-  },
+      delay: 1000,
+      disableOnInteraction: false,
+      // waitForTransition: false,
+    },
     // 如果需要分页器
     pagination: {
       el: '.swiper-pagination',
     },
- 
     //无限轮播
-    loop : true,
+    loop : true,    
     //改变轮播的方式
-    effect : "fade",
+    effect : "coverflow",   
     fadeEffect: {
     crossFade: true,
   }
