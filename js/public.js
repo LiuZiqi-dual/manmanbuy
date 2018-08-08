@@ -108,7 +108,7 @@ if (button) {
                      clearInterval(timer);
                  }
              }, 1000);
-
+             $(".search_box button").removeClass("active_btn");
           }
           
           
