@@ -28,7 +28,7 @@ function detail() {
             areaid: areaid,
         },
         success: function (res) {
-            console.log(res);
+            // console.log(res);
             // console.log(res.result);
             var htmlStr = template("shopListTmp", {
                 data: res.result

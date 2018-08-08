@@ -5,7 +5,6 @@ $.ajax({
     // data: "data",
     dataType: "json",
     success: function (res) {
-        console.log(res.result);
         $('.cat_nav').html(template('cat_nav_template', {
             res: res.result
         }));
