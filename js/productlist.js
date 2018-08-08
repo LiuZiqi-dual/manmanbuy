@@ -37,7 +37,7 @@ function ajax() {
         data: "categoryid=" + categoryid + "&pageid=" + pageid,
         dataType: "json",
         success: function (data) {
-            var num2 = [];
+            var num2 = [];  
             $('.container ul').html(template(
                 'productlist_template', {
                     data: data.result

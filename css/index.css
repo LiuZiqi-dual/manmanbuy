@@ -2,6 +2,7 @@
 body {
   /* 分类导航页面开始 */
   /* 分类导航页面结束 */
+  /* 轮播图开始 */
   /* 超值折扣推荐部分开始 */
   /* 超值折扣推荐部分结束 */
   /* 主页底部剩余部分开始 */
@@ -77,6 +78,16 @@ body .cat_nav div a img {
 
 body .cat_nav div a span {
   height: 20px;
+}
+
+body .swiper-container {
+  width: 100%;
+  height: 120px;
+}
+
+body .swiper-container img {
+  width: 100%;
+  height: 100%;
 }
 
 body .hotlist .hotlist_nav {
