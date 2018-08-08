@@ -29,7 +29,8 @@
   width: 60px;
   height: 30px;
   border-radius: 30px;
-  background-color: #ff841d;
+  background-image: -webkit-gradient(linear, left top, right top, from(#DF3C96), to(#E4007F));
+  background-image: linear-gradient(to right, #DF3C96, #E4007F);
   text-align: center;
   line-height: 30px;
   color: #fff;
