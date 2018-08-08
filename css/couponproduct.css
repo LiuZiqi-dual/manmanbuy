@@ -2,7 +2,8 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #f4483e;
+  background: -webkit-gradient(linear, right bottom, left top, from(#f34c8c), color-stop(#fa024d), to(#c042d4));
+  background: linear-gradient(to left top, #f34c8c, #fa024d, #c042d4);
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -101,11 +102,6 @@ header .icon-app {
   width: 100%;
   color: #ff9900;
   padding: 15px 0;
-<<<<<<< HEAD
-  height: 30px;
-  line-height: 30px;
-=======
->>>>>>> b11efd4abbb3ad80582a26e4f321ee7d49c3ee28
   text-align: center;
   font-size: 14px;
 }

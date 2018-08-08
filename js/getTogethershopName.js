@@ -6,7 +6,7 @@ $(function () {
         dataType:'json',
         success:function (res) {
             // console.log(res);
-            console.log(res.result);
+            // console.log(res.result);
             var htmlStr1 = template("select1Tmp",{data:res.result});
             // console.log(htmlStr1);
             $('.select1 ul').html(htmlStr1);
