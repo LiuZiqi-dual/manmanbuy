@@ -2,10 +2,43 @@
 body {
   /* 分类导航页面开始 */
   /* 分类导航页面结束 */
+  /* 轮播图开始 */
   /* 超值折扣推荐部分开始 */
   /* 超值折扣推荐部分结束 */
   /* 主页底部剩余部分开始 */
   /* 主页底部剩余部分结束 */
+}
+
+body .cover {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 998;
+  display: none;
+  padding-top: 50px;
+}
+
+body .cover .close {
+  position: absolute;
+  width: 50px;
+  height: 54px;
+  line-height: 50px;
+  top: 0;
+  right: 0;
+  background-color: #000;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  z-index: 999;
+  text-align: center;
+}
+
+body .cover .close .icon_close {
+  color: #fff;
+  font-size: 42px;
+  font-weight: 900;
 }
 
 body .cat_nav {
@@ -47,8 +80,19 @@ body .cat_nav div a span {
   height: 20px;
 }
 
+body .swiper-container {
+  width: 100%;
+  height: 120px;
+}
+
+body .swiper-container img {
+  width: 100%;
+  height: 100%;
+}
+
 body .hotlist .hotlist_nav {
-  background-color: #FF841D;
+  background-image: -webkit-gradient(linear, left top, right top, from(#DF3C96), to(#E4007F));
+  background-image: linear-gradient(to right, #DF3C96, #E4007F);
   height: 36px;
 }
 
@@ -117,7 +161,8 @@ body .more_hotlist div a {
 }
 
 body .hotlist_nav {
-  background-color: #FF841D;
+  background-image: -webkit-gradient(linear, left top, right top, from(#DF3C96), to(#E4007F));
+  background-image: linear-gradient(to right, #DF3C96, #E4007F);
   height: 36px;
 }
 

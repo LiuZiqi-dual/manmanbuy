@@ -1,43 +1,38 @@
+// html{
+//     overflow:hidden;
+// }
 body{
-    // /* 搜索框部分开始 */
-    // .search{
-    //     padding: 10px;
-    //     height: 50px;
-    //     border-bottom: 1px solid #E6E6E6;
-    //     margin-bottom: 5px;
-    //     .search_box{
-    //         position: relative;
-    //         height: 30px;
-    //         background-color: #F1F1F1;
-    //         border-radius: 15px;
-    //         padding-right:64px; 
-    //         input{
-    //             width: 100%;
-    //             height: 100%;
-    //             background-color: transparent;
-    //             border: 0px solid transparent;
-    //             padding-left: 20px;
-    //             font-size: 16px;
-    //             outline: none;
-    //         }
-    //         button{
-    //             position: absolute;
-    //             top: 0px;
-    //             right:0px;
-    //             width: 64px;
-    //             height: 30px;
-    //             line-height: 100%;
-    //             background-color: #FF841D;
-    //             border: 0px solid transparent;
-    //             border-radius: 15px;
-    //             font-size: 16px;
-    //             color: #fff;
-    //             outline: none;
-    //         }     
-    //     }
-    // }
-    // /* 搜索框部分结束 */
+    // overflow:hidden;
     /* 分类导航页面开始 */
+    .cover{
+        position: fixed;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.3);
+        z-index: 998;
+        display: none;
+        padding-top: 50px;
+        .close{
+            position: absolute;
+            width: 50px;
+            height: 54px;
+            line-height: 50px;
+            top: 0;
+            right: 0;
+            background-color: #000;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            z-index: 999;
+            text-align: center;
+            .icon_close{
+                color:#fff;
+                font-size: 42px;
+                font-weight: 900;
+            }
+        }
+    }
     .cat_nav{
         display: flex;
         flex-wrap: wrap;
@@ -65,10 +60,38 @@ body{
         }
     }
     /* 分类导航页面结束 */
+    /* 轮播图开始 */
+    .swiper-container {
+        width: 100%;
+        height: 120px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }  
+    // .swipe{
+    //    width: 100%;  
+    //    height: 200px; 
+    //    overflow: hidden;
+    //    ul{
+    //        width: 700%;
+    //        height: 100%;
+    //       li{
+    //           float:left;
+    //           img{
+    //               width: 100%;
+    //               height: 100%;
+    //           }
+    //       }
+    //    }
+       
+    // }
+    //轮播图结束
     /* 超值折扣推荐部分开始 */
     .hotlist{
         .hotlist_nav{
-            background-color: #FF841D;
+            // background-color: #FF841D;
+            background-image: linear-gradient(to right,#DF3C96,#E4007F);
             height: 36px;
             a{
                 height: 100%;
@@ -120,7 +143,8 @@ body{
         }
     }
     .hotlist_nav{
-        background-color: #FF841D;
+        // background-color: #FF841D;
+        background-image: linear-gradient(to right,#DF3C96,#E4007F);
         height: 36px;
         a{
             height: 100%;

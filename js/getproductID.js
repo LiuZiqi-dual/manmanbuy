@@ -26,12 +26,9 @@ var two_content = $.getUrlParam('categoryid');
       //动态生成第三个标题
          $(".head").append("<a href='./productlist.html?categoryid="+two_content+"'>"+arr[0]+"</a>");
          $(".table_content").html(res.result[0].bjShop);
-
-    
      })
  }
 //  发送ajax   获取评论的数据
-
  function getproductPinglun(){
     $.get("http://193.112.55.79:9090/api/getproductcom","productid="+productId,function(res){      
     var Net_firend_html = template("Net_firend",{data:res.result});
@@ -42,6 +39,6 @@ var two_content = $.getUrlParam('categoryid');
  //发送拿取二级菜单的标题
  $.get("http://193.112.55.79:9090/api/getcategorybyid","categoryid="+two_content,function(res){
       //改变第二级标题的内容
-      $(".head a").eq(1).html(res.result[0].category+" >")
+      $(".head a").eq(1).html(res.result[0].category+" >")       
  })
  
