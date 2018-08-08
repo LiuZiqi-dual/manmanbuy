@@ -77,7 +77,7 @@ body .search .search_box button {
   width: 64px;
   height: 30px;
   line-height: 100%;
-  background-color: #FF841D;
+  background-color: #E3119F;
   border: 0px solid transparent;
   border-radius: 15px;
   font-size: 16px;
@@ -137,7 +137,7 @@ body .back_top_btn a .icon_back_top {
 }
 
 body footer {
-  background-color: #EFEFEF;
+  background-color: #fff6fc;
   overflow: hidden;
 }
 

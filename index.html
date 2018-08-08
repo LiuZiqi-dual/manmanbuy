@@ -5,18 +5,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="Floppy Bird" />
+  <meta property="og:description" content="play floppy bird. a remake of popular game flappy biusing just html/css/js" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://nebez.github.io/floppybird/assets/thumb.png" />
+  <meta property="og:url" content="http://nebez.github.io/floppybird/" />
+  <meta property="og:site_name" content="Floppy Bird" />
+  
   <title>慢慢买比价网——放心购物，我们绝不外链到拼多多</title>
   <link rel="shortcut icon" href="./favicon.ico">
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/public.css">
-  <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/moneyctrl.css">
+
+  <!-- Style sheets -->
+  <link href="./lib/floppybird-gh-pages/css/reset.css" rel="stylesheet">
+  <link href="./lib/floppybird-gh-pages/css/main.css" rel="stylesheet">
   <meta name="description" content="慢慢买比价网-专业的综合网上比价商城,数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!" />
   <meta name="Keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,慢慢买比价网" />
 </head>
-
 <body>
+  <!-- flappybird部分开始 -->
+  <div class="cover">
+    <div class="close">
+      <i class="iconfont icon_close">&#xe69a;</i>
+    </div>
+      <div id="gamecontainer">
+          <div id="gamescreen">
+             <div id="sky" class="animated">
+                <div id="flyarea">
+                   <div id="ceiling" class="animated"></div>
+                   <!-- This is the flying and pipe area container -->
+                   <div id="player" class="bird animated"></div>
+                   
+                   <div id="bigscore"></div>
+                   
+                   <div id="splash"></div>
+                   
+                   <div id="scoreboard">
+                      <div id="medal"></div>
+                      <div id="currentscore"></div>
+                      <div id="highscore"></div>
+                      <div id="replay"><img src="assets/replay.png" alt="replay"></div>
+                   </div>
+                   
+                   <!-- Pipes go here! -->
+                </div>
+             </div>
+             <div id="land" class="animated"><div id="debug"></div></div>
+          </div>
+       </div>
+       <div class="boundingbox" id="playerbox"></div>
+       <div class="boundingbox" id="pipebox"></div>
+  </div>
+  <!-- flappybird部分结束 -->
+
   <!-- 导航栏部分开始 -->
   <nav class="clearfix" id="backTop">
     <div class="logo fl">
@@ -39,6 +84,20 @@
     </div>
   </div>
   <!-- 搜索框部分结束 -->
+  <!-- 轮播图开始 -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href="javascript:;"><img src="images/index1.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href="javascript:;"><img src="images/index2.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href="javascript:;"><img src="images/index3.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href="javascript:;"><img src="images/index4.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href="javascript:;"><img src="images/index5.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href="javascript:;"><img src="images/index6.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href="javascript:;"><img src="images/index7.jpg" alt=""></a></div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+  <!-- 轮播图结束 -->
   <!-- 分类导航页面开始 -->
   <div class="cat_nav">
 
@@ -120,10 +179,18 @@
   <!-- footer部分结束 -->
 </body>
 <script src="./js/jquery-1.12.2.js"></script>
+<script src="./lib/tap-swpie.js"></script>
 <script src="./art-template/template-web.js"></script>
 <script src="./lib/scrollListener.js"></script>
 <script src="./js/public.js"></script>
+<script src="lib/swiper/js/swiper.min.js"></script>
 <script src="./js/index.js"></script>
+<!-- flappybird部分开始 -->
+<script src="./lib/floppybird-gh-pages/js/jquery.min.js"></script>
+<script src="./lib/floppybird-gh-pages/js/jquery.transit.min.js"></script>
+<script src="./lib/floppybird-gh-pages/js/buzz.min.js"></script>
+<script src="./lib/floppybird-gh-pages/js/main.js"></script>
+
 <!-- 菜单导航栏模板 -->
 <script type="text/template" id="cat_nav_template">
   {{each res val key}}
@@ -161,5 +228,22 @@
   </li>
   {{/each}}
 </script>
+<script>      
+  var mySwiper = new Swiper ('.swiper-container', {
+    autoplay: {
+    delay: 1500,//1秒切换一次
+    disableOnInteraction: false,
+  },
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    //无限轮播
+    loop : true,
+    //改变轮播的方式
+    effect : 'cube',
 
+  })        
+
+</script>
 </html>
