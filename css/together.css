@@ -74,6 +74,12 @@ header .inner .center h1 {
   font-size: 12px;
 }
 
+.list .list-t ul .menu0 .texthidden {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .list .list-t .search {
   width: 47px;
   height: 37px;

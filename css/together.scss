@@ -58,6 +58,11 @@ header {
                         font-size: 12px;
                     }
                 }
+                .texthidden{
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
             }
         }
         .search {

@@ -45,11 +45,7 @@ header .icon-app {
 }
 
 .view ul li {
-<<<<<<< HEAD
-  border-bottom: 1px solid #ddd;
-=======
   border-bottom: 1px solid rgba(77, 80, 91, 0.1);
->>>>>>> e06c6592390346e5366dc8fa34ec41ad30a8e450
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
