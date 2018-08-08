@@ -90,7 +90,8 @@ if (button) {
                      //清楚定时器
                      clearInterval(timer);
                  }
-             }, 500) 
+             }, 500)
+             $(".search_box button").addClass("active_btn");
           }else{
             button.style.left = 0+'px'; 
             //======

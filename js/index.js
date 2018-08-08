@@ -24,7 +24,12 @@ $.get("http://193.112.55.79:9090/api/getmoneyctrl",'',function(res){
 },'json')
 
 //隐藏第三行效果
-$('.cat_nav div').on('click',function(){
-    console.log(123);
+$('.cat_nav').on('click',"div:nth-child(8)",function(event){
+    //阻止默认行为  不让他跳到顶部
+    event.preventDefault();
+   $('.cat_nav div:nth-last-child(-n+4)').fadeToggle(500);
+    
     
 });;
+
+ 
