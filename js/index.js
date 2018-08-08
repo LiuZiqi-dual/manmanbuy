@@ -9,7 +9,9 @@ $.ajax({
         $('.cat_nav').html(template('cat_nav_template', {
             res: res.result
         }));
+        $('.cat_nav div:nth-last-child(-n+4)').hide();
     }
+    
 });
 $.get("http://193.112.55.79:9090/api/getmoneyctrl", '', function (res) {
     var num = [];
@@ -22,9 +24,8 @@ $.get("http://193.112.55.79:9090/api/getmoneyctrl", '', function (res) {
     });
     $('.shangping ul').html(html);
     // console.log(res);
-
+   
 }, 'json')
-
 //隐藏第三行效果
 $('.cat_nav').on('click', "div:nth-child(8)", function (event) {
     //阻止默认行为  不让他跳到顶部

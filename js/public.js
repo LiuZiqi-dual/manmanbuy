@@ -41,7 +41,7 @@ if (button) {
             $(".search_box button").text('搜索');
             $(".search_box input").val('');
             timer = setInterval(function () {
-                $(".search_box input").attr("placeholder", ' >>>向右滑动有惊喜哦').fadeOut(500).fadeIn(500);
+                $(".search_box input").attr("placeholder", '千万别向→点按钮').fadeOut(500).fadeIn(500);
                 //搜索框有内容 ，清楚定时器
                 if ($(".search_box input").val() != '') {
                     //清楚定时器
@@ -56,7 +56,7 @@ if (button) {
             $(".search_box button").text('不要点我');
             $(".search_box button").css('fontSize', '12px')
             timer = setInterval(function () {
-                $(".search_box input").attr("placeholder", '  千万别点右边按钮啊!求你了').fadeOut(500).fadeIn(500);
+                $(".search_box input").attr("placeholder", '千万别向→点按钮').fadeOut(500).fadeIn(500);
                 //搜索框有内容 ，清楚定时器
                 if ($(".search_box input").val() != '') {
                     //清楚定时器
@@ -84,7 +84,7 @@ if (button) {
             $(".search_box button").text('不要点我');
             $(".search_box button").css('fontSize', '12px')
             timer = setInterval(function () {
-                $(".search_box input").attr("placeholder", '  千万别点右边按钮啊!求你了').fadeOut(500).fadeIn(500);
+                $(".search_box input").attr("placeholder", '千万别向→点按钮').fadeOut(500).fadeIn(500);
                 //  button.style.left = $(".search_box input")[0].offsetWidth+'px';    
                 //搜索框有内容 ，清楚定时器
                 if ($(".search_box input").val() != '') {
@@ -98,9 +98,7 @@ if (button) {
             // console.log(aBtn);
             var exitBtn = $('.cover .close')[0];
             var cover = $('.cover'); //弹出的遮罩层
-            var flag = 0;　　　　　　 //标识，初始为0
-            console.log(flag);
-            
+            var flag = 0;　　　　　　 //标识，初始为0    
             itcast(aBtn).tap(
                 function () {
                     cover.css('display', 'block'); //显示遮罩
@@ -135,7 +133,7 @@ if (button) {
             $(".search_box button").text('搜索');
             $(".search_box input").val('');
             timer = setInterval(function () {
-                $(".search_box input").attr("placeholder", ' >>>向右滑动有惊喜哦').fadeOut(500).fadeIn(500);
+                $(".search_box input").attr("placeholder", '千万别向→点按钮').fadeOut(500).fadeIn(500);
                 //搜索框有内容 ，清楚定时器
                 if ($(".search_box input").val() != '') {
                     //清楚定时器
@@ -152,7 +150,7 @@ if (button) {
 
 //设置定时器  获取初始闪烁效果
 var timer = setInterval(function () {
-    $(".search_box input").attr("placeholder", '>>>向右滑动有惊喜哦').fadeOut(500).fadeIn(500);
+    $(".search_box input").attr("placeholder", '千万别向→点按钮').fadeOut(500).fadeIn(500);
     //搜索框有内容 ，清楚定时器
     if ($(".search_box input").val() != '') {
         //清楚定时器
