@@ -78,6 +78,7 @@ body .cat_nav div a img {
 
 body .cat_nav div a span {
   height: 20px;
+  font-size: 14px;
 }
 
 body .swiper-container {
@@ -191,6 +192,7 @@ body .hotlist_nav a {
 
 body .hotlist_nav a h3 {
   color: #fff;
+  font-size: 16px;
 }
 
 body .hotlist_nav a .hrefmore {
